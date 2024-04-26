@@ -1,6 +1,5 @@
 #include"params.h"
 #include"readwrite.h"
-#include"Math.h"
 #include"ntt.h"
 
 #include<cstdio>
@@ -41,6 +40,7 @@ int main(){
     // poly_mul();
     // ntt_common(a,b,ab,r);
     ntt_dif(a,b,ab,rt,irt);
+    ntt_Montgomery(a,b,ab,r);
     fWrite(fp,ab,n);
     
     // fclose(fp);
