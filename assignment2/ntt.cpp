@@ -11,7 +11,7 @@ void ntt_common(int *a,int *r,int limit,int type){
     }
     int wnn=3;
     int invwnn=qpow(wnn,p-2,p);
-    std::cout<<wnn<<" "<<invwnn<<"\n";
+    // std::cout<<wnn<<" "<<invwnn<<"\n";
 	for(int mid = 1; mid < limit; mid <<= 1) {	
 		int Wn = qpow( type == 1 ? wnn : invwnn , (p - 1) / (mid << 1),p);
 		for(int j = 0; j < limit; j += (mid << 1)) {

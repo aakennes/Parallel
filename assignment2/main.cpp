@@ -19,14 +19,18 @@ int r[maxn];
 
 int a[maxn],b[maxn],ab[maxn];
 void poly_mul(){
+    int aa[maxn],bb[maxn],aabb[maxn];
+    memcpy(aa,a,sizeof(a));
+    memcpy(bb,b,sizeof(b));
+    memcpy(aabb,ab,sizeof(ab));
     for(int i=0;i<n;++i){
         for(int j=0;j<n;++j){
-            ab[i+j]+=1LL*a[i]*b[j]%p;
-            ab[i+j]%=p;
+            aabb[i+j]+=1LL*aa[i]*bb[j]%p;
+            aabb[i+j]%=p;
         }
     }
     for(int i=0;i<2*n;++i){
-        std::cout<<ab[i]<<" ";
+        std::cout<<aabb[i]<<" ";
     }
 }
 int main(){
