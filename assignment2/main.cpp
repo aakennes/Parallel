@@ -39,7 +39,8 @@ int main(){
     FILE* fp;
     fRead(fp,a,b,n);
     // poly_mul();
-    ntt_common(a,b,ab,r);
+    // ntt_common(a,b,ab,r);
+    ntt_dif(a,b,ab,rt,irt);
     fWrite(fp,ab,n);
     
     // fclose(fp);
