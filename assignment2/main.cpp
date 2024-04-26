@@ -6,7 +6,7 @@
 #include<iostream>
 #include<cstring>
 
-const int maxn=9e3+5;
+const int maxn=1e6+5;
 
 int p=Original_Q;
 int n=Original_N;
@@ -39,8 +39,9 @@ int main(){
     fRead(fp,a,b,n);
     // poly_mul();
     // ntt_common(a,b,ab,r);
-    ntt_dif(a,b,ab,rt,irt);
-    ntt_Montgomery(a,b,ab,r);
+    // ntt_dif(a,b,ab,rt,irt);
+    ntt_dif_x4(a,b,ab,rt,irt);
+    // ntt_Montgomery(a,b,ab,r);
     fWrite(fp,ab,n);
     
     // fclose(fp);
