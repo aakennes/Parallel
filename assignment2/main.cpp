@@ -1,6 +1,5 @@
 #include"params.h"
 #include"readwrite.h"
-#include"Math.h"
 #include"ntt.h"
 
 #include<cstdio>
@@ -38,7 +37,8 @@ int main(){
     FILE* fp;
     fRead(fp,a,b,n);
     // poly_mul();
-    ntt_common(a,b,ab,r);
+    // ntt_common(a,b,ab,r);
+    ntt_Montgomery(a,b,ab,r);
     fWrite(fp,ab,n);
     
     // fclose(fp);
