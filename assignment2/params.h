@@ -2,8 +2,8 @@
 #define VSCODE
 /*Pt3_N must be a 8th of Original_N*/
 /**/
-#define Original_N 256
-#define Original_N256
+#define Original_N 2
+#define Original_N2
 #define Pt3_N 32
 /**/
 /**
@@ -26,7 +26,11 @@
 #define Original_N4096
 #define Pt3_N 512
 /**/
+#define Original_Q 998244353
+#define Original_Q998244353
+#define Bit_mov 31
 /**/
+/**
 #define Original_Q 1409
 #define Original_Q1409
 #define Bit_mov 9

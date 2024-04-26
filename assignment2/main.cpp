@@ -14,6 +14,7 @@ int n=Original_N;
 
 int countw,wn[maxn];
 int r[maxn];
+int rt[maxn],irt[maxn];
 
 
 
@@ -28,13 +29,13 @@ void poly_mul(){
             aabb[i+j]+=1LL*aa[i]*bb[j]%p;
             aabb[i+j]%=p;
         }
-    }
-    for(int i=0;i<2*n;++i){
+    } 
+    for(int i=0;i<2*n-1;++i){
         std::cout<<aabb[i]<<" ";
     }
 }
 int main(){
-    findw(countw,wn);
+    // findw(countw,wn);
     FILE* fp;
     fRead(fp,a,b,n);
     // poly_mul();

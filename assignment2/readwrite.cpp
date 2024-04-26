@@ -3,8 +3,10 @@
 void fRead(FILE *fp,int a[],int b[],int n){
     std::string str1="data/datain/NTT";
     std::string str2=std::to_string((int)Original_N);
-    std::string str3=std::to_string((int)Original_Q);
+    // std::string str3=std::to_string((int)Original_Q);
+    std::string str3=std::to_string(1409);
     std::string strin=str1+str2+"_"+str3+".in";
+    std::cout<<strin<<'\n';
     char charArrayin[strin.size() + 1];
     std::copy(strin.begin(), strin.end(), charArrayin);
     charArrayin[strin.size()] = '\0';
