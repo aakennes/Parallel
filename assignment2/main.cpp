@@ -18,6 +18,7 @@ Mint RT[maxn],IRT[maxn];
 
 int a[maxn],b[maxn],ab[maxn];
 Mint A[maxn],B[maxn],AB[maxn];
+u32x8 Ax[maxn],Bx[maxn],Cx[maxn];
 
 void poly_mul(){
     int aa[maxn],bb[maxn],aabb[maxn];

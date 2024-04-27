@@ -2,7 +2,7 @@
 #include<iostream>
 #include<cstring>
 
-#include"params.h"
+#include"SIMD.h"
 
 
 int qpow(int a,int x,int p);
@@ -11,11 +11,6 @@ void findw(int countw,int wn[]);
 
 template <std::uint32_t P> 
 struct MontgomeryModInt32 {
-public:
-    using i32 = std::int32_t;
-    using u32 = std::uint32_t;
-    using i64 = std::int64_t;
-    using u64 = std::uint64_t;
 
 private:
     u32 v;

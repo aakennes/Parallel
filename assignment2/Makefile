@@ -1,9 +1,9 @@
 CC=/usr/bin/g++
-CFLAGS += -march=native -fomit-frame-pointer
+CFLAGS += -march=core-avx2 -fomit-frame-pointer
 #LDFLAGS=-lcrypto
 
-SOURCES= Math.cpp readwrite.cpp ntt.cpp main.cpp 
-HEADERS= Math.h params.h readwrite.h ntt.h
+SOURCES= Math.cpp readwrite.cpp ntt.cpp SIMD.cpp main.cpp 
+HEADERS= Math.h params.h readwrite.h ntt.h SIMD.h
 main: $(HEADERS) $(SOURCES)
 	$(CC) $(CFLAGS) -o $@ $(SOURCES) $(LDFLAGS)
 

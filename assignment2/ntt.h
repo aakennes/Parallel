@@ -1,7 +1,6 @@
 #include<cstdio>
 #include<iostream>
 #include<cstring>
-#include<immintrin.h>
 
 #include"Math.h"
 
@@ -29,3 +28,7 @@ void ntt_dif_x4(int *a,int *rt,int *irt,int limit,int level);
 void ntt_dif_x4_Mint(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt);
 void ntt_dit_x4_Mint(Mint *a,Mint *rt,Mint *irt,int limit,int level);
 void ntt_dif_x4_Mint(Mint *a,Mint *rt,Mint *irt,int limit,int level);
+
+void ntt_dif_x4_avx2(u32x8 *a,u32x8 *b,u32x8 *ab,u32x8 *rt,u32x8 *irt);
+void ntt_dit_x4_avx2(u32x8 *a,u32x8 *rt,u32x8 *irt,int limit,int level);
+void ntt_dif_x4_avx2(u32x8 *a,u32x8 *rt,u32x8 *irt,int limit,int level);
