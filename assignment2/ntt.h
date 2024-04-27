@@ -25,3 +25,7 @@ void ntt_dif_Mint(Mint *a,Mint *rt,int limit);
 void ntt_dif_x4(int *a,int *b,int *ab,int *rt,int *irt);
 void ntt_dit_x4(int *a,int *rt,int *irt,int limit,int level);
 void ntt_dif_x4(int *a,int *rt,int *irt,int limit,int level);
+
+void ntt_dif_x4_Mint(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt);
+void ntt_dit_x4_Mint(Mint *a,Mint *rt,Mint *irt,int limit,int level);
+void ntt_dif_x4_Mint(Mint *a,Mint *rt,Mint *irt,int limit,int level);

@@ -64,6 +64,7 @@ void fWrite(FILE *fp,Mint ab[],int n){
     std::string str2=std::to_string((int)Original_N);
     std::string str3=std::to_string((int)Original_Q);
     std::string strout=str1+str2+"_"+str3+".out";
+    std::cout<<strout<<'\n';
     char charArrayout[strout.size() + 1];
     std::copy(strout.begin(), strout.end(), charArrayout);
     charArrayout[strout.size()] = '\0';

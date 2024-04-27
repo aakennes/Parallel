@@ -47,7 +47,8 @@ int main(){
 
     fRead(fp,A,B,n);
     // ntt_Montgomery_Mint(A,B,AB,r);
-    ntt_dif_Mint(A,B,AB,RT,IRT);
+    // ntt_dif_Mint(A,B,AB,RT,IRT);
+    ntt_dif_x4_Mint(A,B,AB,RT,IRT);
     fWrite(fp,AB,n);
 
     // fclose(fp);

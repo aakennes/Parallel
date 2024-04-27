@@ -289,7 +289,6 @@ void ntt_dif_Mint(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt){
 void ntt_dit_x4(int *a,int *rt,int *irt,int limit,int level){
     int one = 1, imag = rt[level-2];
     int logn = __builtin_ctz(limit);
-    // printf("%d\n",n);
     int dw[level - 1];
     dw[0] = rt[level - 3];
     for (int i = 1; i < level - 2; i++)
@@ -307,7 +306,6 @@ void ntt_dit_x4(int *a,int *rt,int *irt,int limit,int level){
         int w2 = 1;
         for (int i = 0; i < limit; i += m) {
             const int w1 = 1LL*w2 * w2 %p, w3 = 1LL*w1 * w2%p;
-            // printf("%d %d\n",w2,w3);
             for (int j = i; j < i + m4; ++j) {
                 int a0 = 1LL*a[j + m4 * 0] * one%p, a1 = 1LL*a[j + m4 * 1] * w2%p;
                 int a2 = 1LL*a[j + m4 * 2] * w1%p, a3 = 1LL*a[j + m4 * 3] * w3%p;
@@ -321,7 +319,6 @@ void ntt_dit_x4(int *a,int *rt,int *irt,int limit,int level){
             w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
         }
     }
-    // for(int i=0;i<2;++i)printf("%d ",a[i]);
 }
 
 void ntt_dif_x4(int *a,int *rt,int *irt,int limit,int level){
@@ -385,5 +382,106 @@ void ntt_dif_x4(int *a,int *b,int *ab,int *rt,int *irt){
     for(int i = 0; i < 2 * n; i++){
         ab[i] = (1LL * ab[i] * invn) % p;
         // printf("%d\n",ab[i]);
+    } 
+}
+
+void ntt_dit_x4_Mint(Mint *a,Mint *rt,Mint *irt,int limit,int level){
+    int one = 1;
+    int logn = __builtin_ctz(limit);
+    Mint imag = rt[level-2];
+    Mint dw[level - 1];
+    dw[0] = rt[level - 3];
+    for (int i = 1; i < level - 2; i++)
+        dw[i] = dw[i - 1] * irt[level - 1 - i] * rt[level - 3 - i];//,printf("%d ",dw[i]);
+    dw[level - 2] = 1LL*dw[level - 3] * irt[1];
+    if (logn & 1) {
+        for (int i = 0; i < limit/2; i++) {
+            Mint x = a[i], y = a[i + limit/2];
+            a[i] = x + y;
+            a[i + limit/2] = x - y;
+        }
+    }
+    for (int e = logn & ~1; e >= 2; e -= 2) {
+        const int m = 1 << e, m4 = m >> 2;
+        Mint w2 = 1;
+        for (int i = 0; i < limit; i += m) {
+            Mint w1 = w2 * w2, w3 = w1 * w2;
+            for (int j = i; j < i + m4; ++j) {
+                Mint a0 = a[j + m4 * 0] * one, a1 = a[j + m4 * 1] * w2;
+                Mint a2 = a[j + m4 * 2] * w1, a3 = a[j + m4 * 3] * w3;
+                Mint t02p = a0 + a2, t13p = a1 + a3;
+                Mint t02m = a0 - a2, t13m = (a1 - a3) * imag;
+                a[j + m4 * 0] = t02p + t13p;
+                a[j + m4 * 1] = t02p - t13p;
+                a[j + m4 * 2] = t02m + t13m;
+                a[j + m4 * 3] = t02m - t13m;
+            }
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))];
+        }
+    }
+}
+
+void ntt_dif_x4_Mint(Mint *a,Mint *rt,Mint *irt,int limit,int level){
+    int one = 1;
+    int logn = __builtin_ctz(limit);
+    Mint imag = irt[level-2];
+    Mint dw[level - 1];
+    dw[0] = irt[level - 3];
+    for (int i = 1; i < level - 2; i++)
+        dw[i] = dw[i - 1] * rt[level - 1 - i] * irt[level - 3 - i];
+    dw[level - 2] = dw[level - 3] * rt[1];
+    
+    for (int e = 2; e <= logn; e += 2) {
+        const int m = 1 << e, m4 = m >> 2;
+        Mint w2 = one;
+        for (int i = 0; i < limit; i += m) {
+            Mint w1 = w2 * w2, w3 = w1 * w2;
+            for (int j = i; j < i + m4; ++j) {
+                Mint a0 = a[j + m4 * 0], a1 = a[j + m4 * 1];
+                Mint a2 = a[j + m4 * 2], a3 = a[j + m4 * 3];
+                Mint t01p = a0 + a1, t23p = a2 + a3;
+                Mint t01m = a0 - a1, t23m = (a2 - a3)* imag;
+                a[j + m4 * 0] = (t01p + t23p)*one;
+                a[j + m4 * 2] = (t01p - t23p)*w1;
+                a[j + m4 * 1] = (t01m + t23m)*w2;
+                a[j + m4 * 3] = (t01m - t23m)*w3;
+            }
+            w2 = w2*dw[__builtin_ctz(~(i >> e))];
+        }
+        // printf("%d ",w2);
+    }
+    if (logn & 1) {
+        for (int i = 0; i < limit/2; i++) {
+            Mint x = a[i], y = a[i + limit/2];
+            a[i] = x + y ;
+            a[i + limit/2] = x - y;
+        }
+    }
+}
+
+void ntt_dif_x4_Mint(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt){
+    int L=0;
+    int limit=1;
+    int level=__builtin_ctzll(p - 1);
+    while(limit <= 2 * n-2){
+        limit <<= 1, L++;
+    } 
+    Mint wnn=3;
+    wnn=wnn.pow((p-1)>>level);
+    rt[0] = wnn;
+    for (int i = 1; i < level; i++) rt[i] = rt[i - 1] * rt[i - 1];
+    irt[0] = 1/wnn;
+    for (int i = 1; i < level; i++) irt[i] = irt[i - 1] * irt[i - 1];
+    ntt_dit_x4_Mint(a,rt,irt,limit,level);
+    ntt_dit_x4_Mint(b,rt,irt,limit,level);
+	for(int i = 0;i<limit;i++){
+        ab[i]=a[i]*b[i];
+    }
+	ntt_dif_x4_Mint(ab,rt,irt,limit,level);
+    Mint Limit=limit;
+    Mint invn=1/Limit;
+    // std::cout<<invn<<'\n';
+    for(int i = 0; i < 2 * n; i++){
+        ab[i] = ab[i] * invn;
     } 
 }
