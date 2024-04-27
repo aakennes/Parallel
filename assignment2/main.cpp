@@ -1,6 +1,6 @@
 #include"params.h"
 #include"readwrite.h"
-#include"ntt.h"
+// #include"ntt.h"
 
 #include<cstdio>
 #include<iostream>
@@ -18,6 +18,7 @@ int rt[maxn],irt[maxn];
 
 
 int a[maxn],b[maxn],ab[maxn];
+Mint A[maxn],B[maxn],AB[maxn];
 void poly_mul(){
     int aa[maxn],bb[maxn],aabb[maxn];
     memcpy(aa,a,sizeof(a));
@@ -36,14 +37,18 @@ void poly_mul(){
 int main(){
     // findw(countw,wn);
     FILE* fp;
-    fRead(fp,a,b,n);
-    // poly_mul();
-    // ntt_common(a,b,ab,r);
-    // ntt_dif(a,b,ab,rt,irt);
-    ntt_dif_x4(a,b,ab,rt,irt);
-    // ntt_Montgomery(a,b,ab,r);
-    fWrite(fp,ab,n);
-    
+    // fRead(fp,a,b,n);
+    // // poly_mul();
+    // // ntt_common(a,b,ab,r);
+    // // ntt_dif(a,b,ab,rt,irt);
+    // // ntt_dif_x4(a,b,ab,rt,irt);
+    // // ntt_Montgomery(a,b,ab,r);
+    // fWrite(fp,ab,n);
+
+
+    fRead(fp,A,B,n);
+    ntt_Montgomery_Mint(A,B,AB,r);
+    fWrite(fp,AB,n);
     // fclose(fp);
     return 0;
 }

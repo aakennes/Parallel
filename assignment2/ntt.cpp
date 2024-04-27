@@ -3,7 +3,6 @@
 #define p Original_Q
 #define n Original_N
 
-using Mint = MontgomeryModInt32<p>; // 定义一个模 P 的模整数类型
 
 void ntt_common(int *a,int *r,int limit,int type){
     for(int i = 0; i < limit; i++) {
@@ -103,6 +102,55 @@ void ntt_Montgomery(int *a,int *b,int *ab,int *r){
         Mint Mabi = ab[i];
         Mint Minvn = invn;
         ab[i] = (Mabi * Minvn).get();
+    } 
+}
+
+void ntt_Montgomery_Mint(Mint *a,int *r,int limit,int type){
+    
+    for(int i = 0; i < limit; i++) {
+		if(i < r[i]){
+            std::swap(a[i], a[r[i]]);
+        }
+    }
+    int wnn = 3;
+    Mint Mwnn = wnn;
+    Mint Minvwnn = 1/Mwnn;
+	for(int mid = 1; mid < limit; mid <<= 1) {	
+        Mint Moperator1 = type == 1 ? Mwnn : Minvwnn;
+        int64_t Moperator2 = (p - 1) / (mid << 1);
+		Mint MWn = Moperator1.pow(Moperator2);
+		for(int j = 0; j < limit; j += (mid << 1)) {
+			Mint Mw = 1;
+			for(int k = 0; k < mid; k++, Mw = Mw * MWn) {                   
+                Mint x = a[j + k];
+				Mint y = Mw * a[j + k + mid];                    
+				a[j + k] = (x + y),
+				a[j + k + mid] = (x - y);
+			}
+		}
+	}
+}
+
+void ntt_Montgomery_Mint(Mint *a,Mint *b,Mint *ab,int *r){
+
+    int L=0,i=0;
+    int limit=1;
+    while(limit <= 2 * n-2){
+        limit <<= 1, L++;
+    } 
+	for(i = 0; i < limit; i++) {
+        r[i] = (r[i >> 1] >> 1) | ((i & 1) << (L - 1));
+    }
+    ntt_Montgomery_Mint(a,r,limit, 1);
+    ntt_Montgomery_Mint(b,r,limit, 1);
+	for(i = 0; i < limit; i++){
+        ab[i]= a[i] * b[i];
+    } 
+	ntt_Montgomery_Mint(ab,r,limit, -1);
+    Mint Mlimit = limit;
+    Mint invn = (1 / Mlimit);
+    for(i = 0; i < 2*n; i++){
+        ab[i] = (ab[i] * invn);
     } 
 }
 
