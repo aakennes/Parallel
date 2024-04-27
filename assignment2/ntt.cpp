@@ -191,9 +191,11 @@ void ntt_dif(int *a,int *b,int *ab,int *rt,int *irt){
     rt[0] = 1;
     rt[1] = qpow(wnn, (p - 1) / limit / 2,p);
     for (int i = 2; i < limit; i++) rt[i] = 1LL * rt[i-1] * rt[1] % p;
+    // for (int i = 2; i < limit; i++) printf("%d ", rt[i]);
     irt[0] = 1;
     irt[1] = qpow(rt[1], p - 2,p);
     for (int i = 2; i < limit; i++) irt[i] = 1LL * irt[i-1] * irt[1] % p;
+    // for (int i = 2; i < limit; i++) printf("%d ", irt[i]);
     for (int i = 0, j = 0; i < limit; i++) {
         if (i > j) {
             std::swap(rt[i], rt[j]);
@@ -205,8 +207,8 @@ void ntt_dif(int *a,int *b,int *ab,int *rt,int *irt){
     ntt_dit(a,rt,limit);
     ntt_dit(b,rt,limit);
 	for(int i = 0;i<limit;i++){
-        // printf("%d ",b[i]);
         ab[i]=1LL*a[i]*b[i]%p;
+        // printf("%d ",ab[i]);
     }
 	ntt_dif(ab,irt,limit);
     int invn=qpow(limit,p-2,p);
@@ -214,6 +216,73 @@ void ntt_dif(int *a,int *b,int *ab,int *rt,int *irt){
     for(int i = 0; i < 2 * n; i++){
         ab[i] = (1LL * ab[i] * invn) % p;
         // printf("%d\n",ab[i]);
+    } 
+}
+
+void ntt_dit_Mint(Mint *a,Mint *r,int limit){
+    for (int i = 1, l = limit >> 1; i < limit; i <<= 1, l >>= 1) {
+        for (int j = 0, q = 0; j < i; j++, q += l << 1) {
+            Mint w = r[i + j];
+            for (int k = q; k < q + l; k++) {
+                Mint x = a[k] , y = a[k + l] * w;
+                a[k + l] = x - y;
+                a[k] = x + y;
+            }
+        }
+    }
+}
+
+void ntt_dif_Mint(Mint *a,Mint *r,int limit){
+    for (int l = 1, i = limit >> 1; i; l <<= 1, i >>= 1) {
+        for (int j = 0, q = 0; j < i; j++, q += l << 1) {
+            Mint w = r[i + j];
+            for (int k = q; k < q + l; k++) {
+                Mint x = a[k] , y = a[k + l];
+                a[k + l] =(x - y) * w;
+                a[k] = (x + y);
+            }
+        }
+    }
+}
+
+void ntt_dif_Mint(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt){
+    int L=0;
+    int limit=1;
+    while(limit <= 2 * n-2){
+        limit <<= 1, L++;
+    } 
+    Mint wnn = 3;
+    Mint invwnn = 1 / wnn;
+    rt[0] = 1;
+    rt[1] = wnn.pow((p - 1) / limit / 2);
+    for (int i = 2; i < limit; i++) rt[i] = rt[i-1] * rt[1];
+    // for (int i = 2; i < limit; i++) printf("%d ", rt[i].get());
+    irt[0] = 1;
+    irt[1] = 1 / rt[1];
+    for (int i = 2; i < limit; i++) irt[i] = irt[i-1] * irt[1];
+    // for (int i = 2; i < limit; i++) printf("%d ", irt[i].get());
+    for (int i = 0, j = 0; i < limit; i++) {
+        if (i > j) {
+            std::swap(rt[i], rt[j]);
+            std::swap(irt[i], irt[j]);
+        }
+        // printf("%d ",rt[i]);
+        for (int t = limit >> 1; (j ^= t) < t; t >>= 1);
+    }
+    ntt_dit_Mint(a,rt,limit);
+    ntt_dit_Mint(b,rt,limit);
+	for(int i = 0;i<limit;i++){
+        // printf("%d ",b[i].get());
+        ab[i]=a[i]*b[i];
+        // printf("%d ",ab[i].get());
+    }
+	ntt_dif_Mint(ab,irt,limit);
+    Mint Mlimit = limit;
+    Mint invn = 1 / Mlimit;
+    // std::cout<<invn<<'\n';
+    for(int i = 0; i < 2 * n; i++){
+        ab[i] = ab[i] * invn;
+        // printf("%d\n",ab[i].get());
     } 
 }
 

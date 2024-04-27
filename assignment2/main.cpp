@@ -14,11 +14,11 @@ int n=Original_N;
 int countw,wn[maxn];
 int r[maxn];
 int rt[maxn],irt[maxn];
-
-
+Mint RT[maxn],IRT[maxn];
 
 int a[maxn],b[maxn],ab[maxn];
 Mint A[maxn],B[maxn],AB[maxn];
+
 void poly_mul(){
     int aa[maxn],bb[maxn],aabb[maxn];
     memcpy(aa,a,sizeof(a));
@@ -40,15 +40,16 @@ int main(){
     // fRead(fp,a,b,n);
     // // poly_mul();
     // // ntt_common(a,b,ab,r);
-    // // ntt_dif(a,b,ab,rt,irt);
+    // ntt_dif(a,b,ab,rt,irt);
     // // ntt_dif_x4(a,b,ab,rt,irt);
     // // ntt_Montgomery(a,b,ab,r);
     // fWrite(fp,ab,n);
 
-
     fRead(fp,A,B,n);
-    ntt_Montgomery_Mint(A,B,AB,r);
+    // ntt_Montgomery_Mint(A,B,AB,r);
+    ntt_dif_Mint(A,B,AB,RT,IRT);
     fWrite(fp,AB,n);
+
     // fclose(fp);
     return 0;
 }

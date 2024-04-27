@@ -6,7 +6,7 @@ void fRead(FILE *fp,int a[],int b[],int n){
     // std::string str3=std::to_string((int)Original_Q);
     std::string str3=std::to_string(1409);
     std::string strin=str1+str2+"_"+str3+".in";
-    // std::cout<<strin<<'\n';
+    std::cout<<strin<<'\n';
     char charArrayin[strin.size() + 1];
     std::copy(strin.begin(), strin.end(), charArrayin);
     charArrayin[strin.size()] = '\0';
@@ -71,6 +71,6 @@ void fWrite(FILE *fp,Mint ab[],int n){
     for (int i = 0; i < n*2 ; i++){
         // std::cout<<ab[i]<<'\n';
         fprintf(fp,"%d ",ab[i].get());
-        printf("%d ",ab[i].get());
+        // printf("%d ",ab[i].get());
     }
 }
