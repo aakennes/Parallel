@@ -1,8 +1,6 @@
-#include "ntt.h"
+#include"Math.h"
 
 #define p Original_Q
-#define n Original_N
-
 
 void ntt_common(int *a,int *r,int limit,int type){
     for(int i = 0; i < limit; i++) {
@@ -25,13 +23,14 @@ void ntt_common(int *a,int *r,int limit,int type){
 	}
 }
 
-void ntt_common(int *a,int *b,int *ab,int *r){
+void ntt_common(int *a,int *b,int *ab,int *r,int n){
     
     int L=0,i=0;
     int limit=1;
     while(limit <= 2 * n-2){
         limit <<= 1, L++;
     } 
+    // printf("%d\n",limit);
 	for(i = 0; i < limit; i++) {
         r[i] = (r[i >> 1] >> 1) | ((i & 1) << (L - 1));
     }
@@ -78,7 +77,7 @@ void ntt_Montgomery(int *a,int *r,int limit,int type){
 	}
 }
 
-void ntt_Montgomery(int *a,int *b,int *ab,int *r){
+void ntt_Montgomery(int *a,int *b,int *ab,int *r,int n){
 
     int L=0,i=0;
     int limit=1;
@@ -131,7 +130,7 @@ void ntt_Montgomery_Mint(Mint *a,int *r,int limit,int type){
 	}
 }
 
-void ntt_Montgomery_Mint(Mint *a,Mint *b,Mint *ab,int *r){
+void ntt_Montgomery_Mint(Mint *a,Mint *b,Mint *ab,int *r,int n){
 
     int L=0,i=0;
     int limit=1;
@@ -180,7 +179,7 @@ void ntt_dif(int *a,int *r,int limit){
     }
 }
 
-void ntt_dif(int *a,int *b,int *ab,int *rt,int *irt){
+void ntt_dif(int *a,int *b,int *ab,int *rt,int *irt,int n){
     int L=0;
     int limit=1;
     while(limit <= 2 * n-2){
@@ -245,7 +244,7 @@ void ntt_dif_Mint(Mint *a,Mint *r,int limit){
     }
 }
 
-void ntt_dif_Mint(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt){
+void ntt_dif_Mint(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt,int n){
     int L=0;
     int limit=1;
     while(limit <= 2 * n-2){
@@ -358,7 +357,7 @@ void ntt_dif_x4(int *a,int *rt,int *irt,int limit,int level){
     }
 }
 
-void ntt_dif_x4(int *a,int *b,int *ab,int *rt,int *irt){
+void ntt_dif_x4(int *a,int *b,int *ab,int *rt,int *irt,int n){
     int L=0;
     int limit=1;
     int level=__builtin_ctzll(p - 1);
@@ -385,15 +384,9 @@ void ntt_dif_x4(int *a,int *b,int *ab,int *rt,int *irt){
     } 
 }
 
-void ntt_dit_x4_Mint(Mint *a,Mint *rt,Mint *irt,int limit,int level){
+void ntt_dit_x4_Mint(Mint *a,Mint *dw,Mint imag,int limit,int level){
     int one = 1;
     int logn = __builtin_ctz(limit);
-    Mint imag = rt[level-2];
-    Mint dw[level - 1];
-    dw[0] = rt[level - 3];
-    for (int i = 1; i < level - 2; i++)
-        dw[i] = dw[i - 1] * irt[level - 1 - i] * rt[level - 3 - i];//,printf("%d ",dw[i]);
-    dw[level - 2] = 1LL*dw[level - 3] * irt[1];
     if (logn & 1) {
         for (int i = 0; i < limit/2; i++) {
             Mint x = a[i], y = a[i + limit/2];
@@ -417,22 +410,15 @@ void ntt_dit_x4_Mint(Mint *a,Mint *rt,Mint *irt,int limit,int level){
                 a[j + m4 * 3] = t02m - t13m;
             }
             w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))];
-            printf("%d ",__builtin_ctz(~(i >> e)));
+            // printf("%d ",__builtin_ctz(~(i >> e)));
         }
-        puts("");
+        // puts("");
     }
 }
 
-void ntt_dif_x4_Mint(Mint *a,Mint *rt,Mint *irt,int limit,int level){
+void ntt_dif_x4_Mint(Mint *a,Mint *dw,Mint imag,int limit,int level){
     int one = 1;
     int logn = __builtin_ctz(limit);
-    Mint imag = irt[level-2];
-    Mint dw[level - 1];
-    dw[0] = irt[level - 3];
-    printf("%d ",dw[0].get());
-    for (int i = 1; i < level - 2; i++)
-        dw[i] = dw[i - 1] * rt[level - 1 - i] * irt[level - 3 - i],printf("%d ",dw[i].get());
-    dw[level - 2] = dw[level - 3] * rt[1];
     
     for (int e = 2; e <= logn; e += 2) {
         const int m = 1 << e, m4 = m >> 2;
@@ -462,7 +448,7 @@ void ntt_dif_x4_Mint(Mint *a,Mint *rt,Mint *irt,int limit,int level){
     }
 }
 
-void ntt_dif_x4_Mint(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt){
+void ntt_dif_x4_Mint(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt,int n){
     int L=0;
     int limit=1;
     int level=__builtin_ctzll(p - 1);
@@ -475,12 +461,23 @@ void ntt_dif_x4_Mint(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt){
     for (int i = 1; i < level; i++) rt[i] = rt[i - 1] * rt[i - 1];
     irt[0] = 1/wnn;
     for (int i = 1; i < level; i++) irt[i] = irt[i - 1] * irt[i - 1];
-    ntt_dit_x4_Mint(a,rt,irt,limit,level);
-    ntt_dit_x4_Mint(b,rt,irt,limit,level);
+    Mint dw[level - 1];
+    dw[0] = irt[level - 3];
+    for (int i = 1; i < level - 2; i++)
+        dw[i] = dw[i - 1] * rt[level - 1 - i] * irt[level - 3 - i];
+    dw[level - 2] = dw[level - 3] * rt[1];
+
+    ntt_dit_x4_Mint(a,dw,irt[level-2],limit,level);
+    ntt_dit_x4_Mint(b,dw,irt[level-2],limit,level);
+
 	for(int i = 0;i<limit;i++){
         ab[i]=a[i]*b[i];
     }
-	ntt_dif_x4_Mint(ab,rt,irt,limit,level);
+    dw[0] = rt[level - 3];
+    for (int i = 1; i < level - 2; i++)
+        dw[i] = dw[i - 1] * irt[level - 1 - i] * rt[level - 3 - i];//,printf("%d ",dw[i]);
+    dw[level - 2] = 1LL*dw[level - 3] * irt[1];
+	ntt_dif_x4_Mint(ab,dw,rt[level-2],limit,level);
     Mint Limit=limit;
     Mint invn=1/Limit;
     for(int i = 0; i < 2 * n; i++){
@@ -488,31 +485,102 @@ void ntt_dif_x4_Mint(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt){
     } 
 }
 
-void ntt_dif_x4_avx2(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt){
-    int L=0;
-    int limit=1;
-    int level=__builtin_ctzll(p - 1);
-    while(limit <= 2 * n-2){
-        limit <<= 1, L++;
-    } 
-    Mint wnn=3;
-    wnn=wnn.pow((p-1)>>level);
-    rt[0] = wnn;
-    for (int i = 1; i < level; i++) rt[i] = rt[i - 1] * rt[i - 1];
-    irt[0] = 1/wnn;
-    for (int i = 1; i < level; i++) irt[i] = irt[i - 1] * irt[i - 1];
-    ntt_dit_x4_Mint(a,rt,irt,limit,level);
-    ntt_dit_x4_Mint(b,rt,irt,limit,level);
-	for(int i = 0;i<limit;i++){
-        ab[i]=a[i]*b[i];
-    }
-	ntt_dif_x4_Mint(ab,rt,irt,limit,level);
-    Mint Limit=limit;
-    Mint invn=1/Limit;
-    // std::cout<<invn<<'\n';
-    for(int i = 0; i < 2 * n; i++){
-        ab[i] = ab[i] * invn;
-    } 
-}
-void ntt_dit_x4_avx2(Mint *a,Mint *rt,Mint *irt,int limit,int level);
-void ntt_dif_x4_avx2(Mint *a,Mint *rt,Mint *irt,int limit,int level);
+// void ntt_dif_x4_avx2(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt,Mintx8 *RT1,Mintx8 *RT2,Mintx8 *IRT1,Mintx8 *IRT2){
+//     int L=0;
+//     int limit=1;
+//     int level=__builtin_ctzll(p - 1);
+//     while(limit <= 2 * n-2){
+//         limit <<= 1, L++;
+//     }
+//     Mint wnn=3;
+//     wnn=wnn.pow((p-1)>>level);
+//     rt[0] = wnn;
+//     for (int i = 1; i < level; i++) rt[i] = rt[i - 1] * rt[i - 1];
+//     irt[0] = 1/wnn;
+//     for (int i = 1; i < level; i++) irt[i] = irt[i - 1] * irt[i - 1];
+    
+//     Mint one_Z=1;
+//     Mint pr = one_Z, pr_I = one_Z;
+//     for(int i = 0; i < level - 2; ++i){
+//         RT1[i] = setu32x8(pr * rt[i + 3]);
+//         IRT1[i] = setu32x8(pr_I * irt[i + 3]);
+//         pr = pr * irt[i + 3], pr_I = pr_I * rt[i + 3];
+//     }
+//     pr = one_Z, pr_I = one_Z;
+//     for(int i = 0; i < level - 3; ++i){
+//         Mint a0(one_Z), a1(pr* rt[i + 4]), a2(a1*a1), a3(a1*a2), 
+//         a4(a1*a3), a5(a1*a4), a6(a1*a5), a7(a1*a6);
+//         RT2[i] = (Mintx8){a0, a1, a2, a3, a4, a5, a6, a7};
+//         pr = pr*irt[i + 4];
+//     }
+//     for(int i = 0; i < level - 3; ++i){
+//         Mint a0(one_Z), a1(pr_I*irt[i + 4]), a2(a1*a1), a3(a1*a2), 
+//         a4(a1*a3), a5(a1*a4), a6(a1*a5), a7(a1*a6);
+//         IRT2[i] = (Mintx8){a0, a1, a2, a3, a4, a5, a6, a7};
+//         pr_I = pr_I*rt[i + 4];
+//     }
+
+//     Mintx8 pr2,pr2_I,pr4,pr4_I;
+//     pr2 = (Mintx8){one_Z, one_Z, one_Z, rt[2], one_Z, one_Z, one_Z, rt[2]};
+//     pr2_I = (Mintx8){one_Z, one_Z, one_Z, irt[2], one_Z, one_Z, one_Z, irt[2]};
+//     pr4 = (Mintx8){one_Z, one_Z, one_Z, one_Z, one_Z, rt[3], rt[2], rt[2]* rt[3]};
+//     pr4_I = (Mintx8){one_Z, one_Z, one_Z, one_Z, one_Z, irt[3], irt[2], irt[2]* irt[3]};
+
+//     ntt_dit_x4_avx2(a,RT1,RT2,pr2,pr4,limit,level);
+//     ntt_dit_x4_avx2(b,RT1,RT2,pr2,pr4,limit,level);
+
+//     for(int i = 0;i<limit;i++){
+//         ab[i]=a[i]*b[i];
+//     }
+//     ntt_dif_x4_avx2(b,RT1,RT2,pr2,pr4,limit,level);
+//     Mint Limit=limit;
+//     Mint invn=1/Limit;
+//     for(int i = 0; i < 2 * n; i++){
+//         ab[i] = ab[i] * invn;
+//     }
+// }
+// void ntt_dit_x4_avx2(Mint *a,Mintx8 *rt,Mintx8 *irt,Mintx8 pr2,Mintx8 pr4,int limit,int level){
+//     Mintx8 *f=RC(Zx8*, a);
+//     int one = 1;
+//     int logn = __builtin_ctz(limit);
+//     Mintx8 *f=(Mintx8*)a;
+//     if (logn & 1) {
+//         for (int i = 0; i < (limit>>4); i++) {
+//             Mintx8 x = a[i], y = a[i + limit/2];
+//             f[i] = x + y;
+//             f[i + limit/2] = x - y;
+//         }
+//     }
+//     Mint one_Z=1;
+//     Mintx8 one_z=setu32x8(one_Z);
+//     for (int e = logn & ~1; e >= 2; e -= 2) {
+//         const int m = 1 << e, m4 = m >> 2;
+//         Mintx8 w2 = one_z,image = ;
+//         for (int i = 0; i < (limit>>3); i += m) {
+//             Mint w1 = w2 * w2, w3 = w1 * w2;
+//             for (int j = i; j < i + m4; ++j) {
+//                 Mint a0 = a[j + m4 * 0] * one, a1 = a[j + m4 * 1] * w2;
+//                 Mint a2 = a[j + m4 * 2] * w1, a3 = a[j + m4 * 3] * w3;
+//                 Mint t02p = a0 + a2, t13p = a1 + a3;
+//                 Mint t02m = a0 - a2, t13m = (a1 - a3) * imag;
+//                 a[j + m4 * 0] = t02p + t13p;
+//                 a[j + m4 * 1] = t02p - t13p;
+//                 a[j + m4 * 2] = t02m + t13m;
+//                 a[j + m4 * 3] = t02m - t13m;
+//             }
+//             w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))];
+//             // printf("%d ",__builtin_ctz(~(i >> e)));
+//         }
+//         // puts("");
+//     }
+//     for(int i = 0; i < n; ++i){
+//         Mintx8& fi = a[i];
+//         fi = Neg<0xaa>(fi) + shuffle<0xb1>(fi), fi = mulZx8(fi, pr2);
+//         fi = Neg<0xcc>(fi) + shuffle<0x4e>(fi), fi = mulZx8(fi, pr4);
+//         fi = Neg<0xf0>(fi) + RC(Zx8, swaplohi128(RC(I256, fi))), fi = mulZx8(fi, r);
+//         r = r* iab4.rt4ix8_I[cro_32(i)];
+//     }
+// }
+// void ntt_dif_x4_avx2(Mintx8 *a,Mintx8 *rt,Mintx8 *irt,int limit,int level){
+
+// }

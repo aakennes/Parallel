@@ -1,0 +1,5 @@
+*.exe
+*.bin
+*.bat
+assignment2/*.exe
+assignment2/data/dataout/*.out

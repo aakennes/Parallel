@@ -1,20 +1,18 @@
 #include<iostream>
 #include<algorithm>
-#include <immintrin.h>
-
-using i32 = int;
-using u32 = unsigned;
-using i64 = long long;
-using u64 = unsigned long long;
+#include<immintrin.h>
+#include<iostream>
+#include<sys/time.h>
+#include<chrono>
+#include"../params.h"
+using namespace std;
 
 #pragma GCC target("avx2")
 #define Vec(sz, T) __attribute((vector_size(sz))) T
 #define IL __inline__ __attribute__((always_inline))
 #define RC(T, x) reinterpret_cast<T>(x)
 
-
-
-constexpr u32 mod = 998244353;
+constexpr u32 mod = 104857601;
 constexpr u32 G = 3;
 constexpr int sta_l_MB = 64;
 
@@ -80,6 +78,7 @@ namespace field_Z{
 		return calc::mulZs(x, fixes > 0 ? calc::powZ(Space.R2, fixes) : calc::powZ(1, -fixes));
 	}
 }
+
 namespace SIMD{
 	using i32x8 = Vec(32, i32);
 	using u32x8 = Vec(32, u32);
@@ -96,6 +95,7 @@ namespace SIMD{
 	IL void storeu(const I256 &x, void* data){return _mm256_storeu_si256(RC(__m256i_u*, data), x);}
 	IL u64x4 mulu32x8_fus(const u32x8 &x, const u32x8 &y){return RC(u64x4, _mm256_mul_epu32(RC(I256, x), RC(I256, y)));}
 }
+
 namespace field_Z{
 	using SIMD::x8;
 	using SIMD::u32x8;
@@ -136,15 +136,14 @@ namespace field_Z{
 #undef Vec
 
 namespace poly{
-	//多项式基础
+
 	namespace poly_base{
 		using namespace field_Z;
 		constexpr int bit_up(int x){return 1 << (32 - __builtin_clz(x));}
 		constexpr int cro_32(int x){return __builtin_ctz(~x);}
 		inline Z *to_align(void *mem){return RC(Z*, ((RC(u64, mem) + 31) >> 5) << 5);}
 		inline bool is_align(const void* mem){return (RC(u64, mem) & 31) == 0;}
-		//用于申请临时空间
-        //align用于申请对齐内存
+
 		namespace mem_helper{
 			char _mem[sta_l_MB << 20];
 			void *now = _mem;
@@ -172,10 +171,10 @@ namespace poly{
 	#undef flx
 }
 namespace poly{
-	//快速数论变换.基础 by QedDust413
+
 	namespace f_n_t_t_base{
 		using namespace calc;
-		//A[] *= t
+
 		template<bool strict = false>void mul_t(Z *A, int l, Z t){
 			for(int j = 0; j < l; ++j){
 				A[j] = mulZs<strict>(A[j], t);
@@ -205,7 +204,9 @@ namespace poly{
 				for(int i = 0; i < mp2 - 1; ++i){
 					rt2[i] = mulZs(pr, rt1[i + 2]), rt2_I[i] = mulZs(pr_I, rt1_I[i + 2]);
 					pr = mulZs(pr, rt1_I[i + 2]), pr_I = mulZs(pr_I, rt1[i + 2]);
+				
 				}
+				
 			}
 		};
 		//为以4为基的指令集加速dif/dit提供信息
@@ -225,6 +226,7 @@ namespace poly{
 						Z a0(one_Z), a1(mulZs(pr, rt1[i + 4])), a2(mulZs(a1, a1)), a3(mulZs(a1, a2)), 
 						a4(mulZs(a1, a3)), a5(mulZs(a1, a4)), a6(mulZs(a1, a5)), a7(mulZs(a1, a6));
 						rt4ix8[i] = (Zx8){a0, a1, a2, a3, a4, a5, a6, a7};
+						// std::cout<<a1<<" ";
 					}
 					{
 						Z a0(one_Z), a1(mulZs(pr_I, rt1_I[i + 4])), a2(mulZs(a1, a1)), a3(mulZs(a1, a2)), 
@@ -245,36 +247,6 @@ namespace poly{
     namespace f_n_t_t{
 		using namespace f_n_t_t_base;
 		constexpr ntt_info_base2 ib2;
-		//dif-ntt 非注重性能的实现
-		template<bool strict = false, int fixes = 0>void dif_base2(Z *A, int lim){
-			for(int L = lim >> 1, R = lim; L; L >>= 1, R >>= 1){
-				Z r = one_Z;
-				for(int i = 0, k = 0; i < lim; i += R, ++k){
-					for(int j = 0; j < L; ++j){
-						Z x = dilate2(A[i + j] - mod2) , y = mulZ(r, A[i + j + L]);
-						A[i + j] = x + y, A[i + j + L] = x - y + mod2;
-					}
-					r = mulZs(r, ib2.rt2[cro_32(k)]);
-				}
-			}
-			if constexpr(fixes){
-				mul_t<strict>(A, lim, trans<fixes>(one_Z));
-			}
-		}
-		//dit-intt 非注重性能的实现
-		template<bool strict = false, int fixes = 0>void dit_base2(Z *A, int lim){
-			for(int L = 1, R = 2; L < lim; L <<= 1, R <<= 1){
-				Z r = one_Z;
-				for(int i = 0, k = 0; i < lim; i += R, ++k){
-					for(int j = 0; j < L; ++j){
-						Z x = A[i + j], y = A[i + j + L];
-						A[i + j] = addZ(x, y), A[i + j + L] = mulZ(x - y + mod2, r);
-					}
-					r = mulZs(r, ib2.rt2_I[cro_32(k)]);
-				}
-			}
-			mul_t<strict>(A, lim, trans<fixes + 1>(mod - ((mod - 1) / lim)));
-		}
 		constexpr Zx8 imagx8 = setu32x8(rt1[2]), imag_Ix8 = setu32x8(rt1_I[2]);
 		constexpr ntt_info_base4x8 iab4;
 		//以4为基的指令集加速DIF式NTT 变换长度应当至少为8 且给出的指针需对32对齐
@@ -310,6 +282,7 @@ namespace poly{
 					r = mulZsx8(r, iab4.rt3x8[cro_32(k)]);
 				}
 			}
+			
 			{
 				constexpr Zx8 _r = setu32x8(trans<fixes>(one_Z));
 				Zx8 r = _r, pr4 = iab4.pr4, pr2 = iab4.pr2;
@@ -378,46 +351,18 @@ namespace poly{
 		}
 		//1E(lim)
 		template<bool strict = false, int fixes = 0>void dif(Z *A, int lim){
-			lim >= 16 ? dif_base4x8<strict, fixes>(A, lim) : dif_base2<strict, fixes>(A, lim);
+			dif_base4x8<strict, fixes>(A, lim);
 		}
 		//1E(lim)
 		template<bool strict = false, int fixes = 0>void dit(Z *A,int lim){
-			lim >= 16 ? dit_base4x8<strict, fixes>(A, lim) : dit_base2<strict, fixes>(A, lim);
+			dit_base4x8<strict, fixes>(A, lim);
 		}
     }
 	using f_n_t_t::dif;
 	using f_n_t_t::dit;
 }
 #undef Stati
-namespace Command{
-	void cut_string(){
-		_Exit(0);
-	}
-}
 
 using poly::alocP;
 using poly::pre_aloc;
 using namespace field_Z;
-
-
-#include<iostream>
-using namespace std;
-void solve(){
-	int n, m;
-	cin >> n >> m;
-	int limit = poly::bit_up(n + m);
-    // printf("%d\n",limit);
-	auto F = alocP(limit), G = alocP(limit);
-	for(int i = 0; i <= n; ++i){cin >> F[i];}
-	std::fill(F + n + 1, F + limit, zero_Z);
-	for(int i = 0; i <= m; ++i){cin >> G[i];}
-	std::fill(F + m + 1, F + limit, zero_Z);
-	poly::dif<false, 1>(F, limit), poly::dif<false, 1>(G, limit), poly::dot(F, limit, G), poly::dit<true, -1>(F, limit);
-	for(int i = 0; i <= n + m; ++i){cout << F[i] << ' ';}
-}
-
-int main(){
-	std::cin.tie(nullptr) -> sync_with_stdio(false);
-	solve();
-	return 0;
-}

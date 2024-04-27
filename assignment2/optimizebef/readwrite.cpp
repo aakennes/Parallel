@@ -1,12 +1,12 @@
 #include"readwrite.h"
 
-void fRead(FILE *fp,int a[],int b[],int n){
-    std::string str1="data/datain/NTT";
-    std::string str2=std::to_string((int)Original_N);
+void fRead(FILE *fp,int a[],int b[],int n,int q){
+    std::string str1="../data/datain/NTT";
+    std::string str2=std::to_string(n);
     // std::string str3=std::to_string((int)Original_Q);
-    std::string str3=std::to_string(1409);
+    std::string str3=std::to_string(q);
     std::string strin=str1+str2+"_"+str3+".in";
-    std::cout<<strin<<'\n';
+    // std::cout<<strin<<'\n';
     char charArrayin[strin.size() + 1];
     std::copy(strin.begin(), strin.end(), charArrayin);
     charArrayin[strin.size()] = '\0';
@@ -21,10 +21,11 @@ void fRead(FILE *fp,int a[],int b[],int n){
 }
 
 void fWrite(FILE *fp,int ab[],int n){
-    std::string str1="data/dataout/NTT";
+    std::string str1="../data/dataout/NTT";
     std::string str2=std::to_string((int)Original_N);
     std::string str3=std::to_string((int)Original_Q);
     std::string strout=str1+str2+"_"+str3+".out";
+    std::cout<<strout<<'\n';
     char charArrayout[strout.size() + 1];
     std::copy(strout.begin(), strout.end(), charArrayout);
     charArrayout[strout.size()] = '\0';
@@ -35,13 +36,12 @@ void fWrite(FILE *fp,int ab[],int n){
     }
 }
 
-void fRead(FILE *fp,Mint a[],Mint b[],int n){
-    std::string str1="data/datain/NTT";
-    std::string str2=std::to_string((int)Original_N);
-    // std::string str3=std::to_string((int)Original_Q);
-    std::string str3=std::to_string(1409);
+void fRead(FILE *fp,Mint a[],Mint b[],int n,int q){
+    std::string str1="../data/datain/NTT";
+    std::string str2=std::to_string(n);
+    std::string str3=std::to_string(q);
     std::string strin=str1+str2+"_"+str3+".in";
-    std::cout<<strin<<'\n';
+    // std::cout<<strin<<'\n';
     char charArrayin[strin.size() + 1];
     std::copy(strin.begin(), strin.end(), charArrayin);
     charArrayin[strin.size()] = '\0';
@@ -60,11 +60,11 @@ void fRead(FILE *fp,Mint a[],Mint b[],int n){
 }
 
 void fWrite(FILE *fp,Mint ab[],int n){
-    std::string str1="data/dataout/NTT";
+    std::string str1="../data/dataout/NTT";
     std::string str2=std::to_string((int)Original_N);
     std::string str3=std::to_string((int)Original_Q);
     std::string strout=str1+str2+"_"+str3+".out";
-    std::cout<<strout<<'\n';
+    // std::cout<<strout<<'\n';
     char charArrayout[strout.size() + 1];
     std::copy(strout.begin(), strout.end(), charArrayout);
     charArrayout[strout.size()] = '\0';

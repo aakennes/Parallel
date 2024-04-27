@@ -2,7 +2,8 @@
 #include<iostream>
 #include<cstring>
 
-#include"SIMD.h"
+
+#include "../params.h"
 
 
 int qpow(int a,int x,int p);
