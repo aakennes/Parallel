@@ -47,6 +47,7 @@ void time_test(){
             int cnt=100;
             for(int k=1;k<=100;++k){
                 FILE* fp;
+                // fRead(fp,a,b,nn[i],qq[j]);
                 fRead(fp,A,B,nn[i],qq[j]);
                 // std::cout<<nn[i]<<" "<<qq[j]<<'\n';
                 auto Start=std::chrono::high_resolution_clock::now();
@@ -68,29 +69,37 @@ void time_test(){
     
 }
 int main(){
-    // time_test();
-    FILE* fp;
-    fRead(fp,a,b,nn[0],qq[0]);
-    // poly_mul();
-    // ntt_common(a,b,ab,r);
-    // ntt_dif(a,b,ab,rt,irt);
-    // ntt_dif_x4(a,b,ab,rt,irt);
-    // for(int i=0;i<nn[0];++i)std::cout<<a[i]<<" ";
-    // ntt_Montgomery(a,b,ab,r,nn[0]);
-    for(int i=0;i<nn[0];++i)aa[i]=In((u32)a[i]);
-    for(int i=0;i<nn[0];++i)bb[i]=In((u32)b[i]);
+    time_test();
+    // FILE* fp;
+    // fRead(fp,A,B,nn[0],qq[0]);
+    // ntt_dif_x4_Mint(A,B,AB,RT,IRT,nn[0]);
+    // std::cout<<"asd\n";
+    // ntt_dif_x4(a,b,ab,rt,irt,nn[0]);
+    // ntt_dif(a,b,ab,rt,irt,nn[0]);
+    // ntt_Montgomery_Mint(A,B,AB,r,nn[0]);
+    // ntt_dif_Mint(A,B,AB,RT,IRT,nn[0]);
+    // for(int i=0;i<10;++i)std::cout<<AB[i]<<" ";
+    // // poly_mul();
+    // // ntt_common(a,b,ab,r);
+    // // ntt_dif(a,b,ab,rt,irt);
+    // // ntt_dif_x4(a,b,ab,rt,irt);
+    // // for(int i=0;i<nn[0];++i)std::cout<<a[i]<<" ";
+
+    // for(int i=0;i<nn[0];++i)aa[i]=In((u32)a[i]);
+    // for(int i=0;i<nn[0];++i)bb[i]=In((u32)b[i]);
     // std::cout<<aa[0]<<"\n";
-    ntt_Montgomery_MMint(aa,bb,aabb,r,nn[0]);
+    // ntt_Montgomery_MMint(aa,bb,aabb,r,nn[0]);
     // std::cout<<get(aabb[1])<<'\n';
     // for(int i=0;i<nn[0]*2-1;++i)std::cout<<get(aabb[i])<<" ";
     // fWrite(fp,ab,n);
     // puts("a--------------");
-    fRead(fp,A,B,nn[0],qq[0]);
+    // fRead(fp,A,B,nn[0],qq[0]);
     // std::cout<<A[0].getv()<<'\n';
-    ntt_Montgomery_Mint(A,B,AB,r,nn[0]);
+    // ntt_Montgomery_Mint(A,B,AB,r,nn[0]);
     // std::cout<<AB[0]<<'\n';
     // ntt_dif_Mint(A,B,AB,RT,IRT);
     // ntt_dif_x4_Mint(A,B,AB,RT,IRT);
+    // time_test();
     // fWrite(fp,AB,n);
 
     // fclose(fp);

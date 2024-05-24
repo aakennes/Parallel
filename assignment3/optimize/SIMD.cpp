@@ -6,11 +6,10 @@ int f[400005],g[400005];
 int main(){
 	// freopen("../data/datain/NTT256_1409.in","r",stdin);
 	freopen("1.out","w",stdout);
-	for(int i=0;i<=9;++i){
-        for(int j=0;j<=3;++j){
+	for(int i=0;i<=0;++i){
+        for(int j=0;j<=0;++j){
 			long double ans=0;
             int cnt=100;
-			
 			std::string str1="../data/datain/NTT";
 			std::string str2=std::to_string(nn[i]);
 			std::string str3=std::to_string(qq[i]);
@@ -38,9 +37,11 @@ int main(){
 				ans+=elapsed.count();
 			}
             std::cout<<ans/cnt<<std::endl;
+			// for(int i = 0; i < 5; ++i){cout << F[i] << ' ';}
         }
+		
     }
 	
-	// for(int i = 0; i < n + m -1; ++i){cout << F[i] << ' ';}
+	
 	return 0;
 }

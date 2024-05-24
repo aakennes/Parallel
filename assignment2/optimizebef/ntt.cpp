@@ -1,4 +1,4 @@
-#include"Math.h"
+#include"ntt.h"
 
 #define p Original_Q
 
@@ -118,6 +118,7 @@ void ntt_Montgomery_Mint(Mint *a,int *r,int limit,int type){
         Mint Moperator1 = type == 1 ? Mwnn : Minvwnn;
         int64_t Moperator2 = (p - 1) / (mid << 1);
 		Mint MWn = Moperator1.pow(Moperator2);
+        // std::cout<<MWn.getv()<<' ';
 		for(int j = 0; j < limit; j += (mid << 1)) {
 			Mint Mw = 1;
 			for(int k = 0; k < mid; k++, Mw = Mw * MWn) {                   
@@ -128,6 +129,8 @@ void ntt_Montgomery_Mint(Mint *a,int *r,int limit,int type){
 			}
 		}
 	}
+    // puts("");
+    // puts("asfasf");
 }
 
 void ntt_Montgomery_Mint(Mint *a,Mint *b,Mint *ab,int *r,int n){
@@ -142,14 +145,75 @@ void ntt_Montgomery_Mint(Mint *a,Mint *b,Mint *ab,int *r,int n){
     }
     ntt_Montgomery_Mint(a,r,limit, 1);
     ntt_Montgomery_Mint(b,r,limit, 1);
+    // printf("%u\n",a[0].getv());
 	for(i = 0; i < limit; i++){
         ab[i]= a[i] * b[i];
+        // std::cout<<a[i]<<' ';
     } 
 	ntt_Montgomery_Mint(ab,r,limit, -1);
     Mint Mlimit = limit;
     Mint invn = (1 / Mlimit);
+    // printf("%u %u\n",Mlimit.getv(),invn.getv());
     for(i = 0; i < 2*n; i++){
         ab[i] = (ab[i] * invn);
+    } 
+}
+
+void ntt_Montgomery_MMint(MMint *a,int *r,int limit,int type){
+    for(int i = 0; i < limit; i++) {
+		if(i < r[i]){
+            std::swap(a[i], a[r[i]]);
+        }
+    }
+    int wnn = 3;
+    MMint Mwnn = wnn;
+    MMint Minvwnn = inv(Mwnn);
+    // std::cout<<Minvwnn<<'\n';
+    Mint ppp=1;
+    MMint pppp=In(1);
+	for(int mid = 1; mid < limit; mid <<= 1) {	
+        MMint Moperator1 = type == 1 ? Mwnn : Minvwnn;
+        int64_t Moperator2 = (p - 1) / (mid << 1);
+		MMint MWn = Pow(Moperator1,Moperator2);
+        // std::cout<<MWn<<"***";
+		for(int j = 0; j < limit; j += (mid << 1)) {
+			MMint Mw = In(1);
+			for(int k = 0; k < mid; k++, Mw = mul(Mw, MWn)) {                   
+                MMint x = a[j + k];
+				MMint y = mul(Mw ,a[j + k + mid]);                    
+				a[j + k] = add(x,y),
+				a[j + k + mid] = sub(x,y);
+			}
+		}
+	}
+    // puts("");
+}
+
+void ntt_Montgomery_MMint(MMint *a,MMint *b,MMint *ab,int *r,int n){
+    int L=0,i=0;
+    int limit=1;
+    while(limit <= 2 * n-2){
+        limit <<= 1, L++;
+    } 
+	for(i = 0; i < limit; i++) {
+        r[i] = (r[i >> 1] >> 1) | ((i & 1) << (L - 1));
+    }
+    
+    ntt_Montgomery_MMint(a,r,limit, 1);
+    ntt_Montgomery_MMint(b,r,limit, 1);
+    // std::cout<<a[0]<<'\n';
+	for(i = 0; i < limit; i++){
+        ab[i]= mul(a[i],b[i]);
+        // std::cout<<get(a[i])<<" ";
+    } 
+    // puts("");
+	ntt_Montgomery_MMint(ab,r,limit, -1);
+    MMint Mlimit = In(limit);
+    MMint invn = inv(Mlimit);
+    // std::cout<<Mlimit<<" "<<invn<<"\n";
+    for(i = 0; i < 2*n; i++){
+        ab[i] = mul(ab[i],invn);
+        // std::cout<<get(ab[i])<<" ";
     } 
 }
 

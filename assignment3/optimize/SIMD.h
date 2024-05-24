@@ -4,6 +4,8 @@
 #include<iostream>
 #include<sys/time.h>
 #include<chrono>
+#include<semaphore.h>
+#include<pthread.h>
 #include"../params.h"
 using namespace std;
 
@@ -249,23 +251,29 @@ namespace poly{
 		constexpr ntt_info_base2 ib2;
 		constexpr Zx8 imagx8 = setu32x8(rt1[2]), imag_Ix8 = setu32x8(rt1_I[2]);
 		constexpr ntt_info_base4x8 iab4;
-		//以4为基的指令集加速DIF式NTT 变换长度应当至少为8 且给出的指针需对32对齐
-        template<bool strict = false, int fixes = 0>void dif_base4x8(Z *A, int lim){
-			int n = lim >> 3, L = n >> 1;
-			Zx8 *f = RC(Zx8*, A);
-			if(__builtin_ctz(n) & 1){
-				for(int j = 0; j < L; ++j){
-					Zx8 x = f[j], y = f[j + L];
-					f[j] = x + y, f[j + L] = x - y + mod2x8;
-				}
-				L >>= 1;
-			}
-			L >>= 1;
+        pthread_barrier_t barr_merge;
+
+        struct ButterflyData{
+            int id;
+            Zx8 *f;
+            int lim;
+            int L;
+        };
+
+        void* dif_func(void* arg){
+            ButterflyData* data = static_cast<ButterflyData*>(arg);
+            int id = data->id;
+            Zx8 *f = data->f;
+            int lim = data->lim;
+            int L = data->L;
+
+			int n = lim >> 3;
+
 			for(int R = L << 2; L; L >>= 2, R >>= 2){
 				Zx8 r = one_Zx8, img = imagx8;
 				for(int i = 0, k = 0; i < n; i += R, ++k){
 					Zx8 r2 = mulZsx8(r, r), r3 = mulZsx8(r2, r);
-					for(int j = 0; j < L; ++j){
+					for(int j = id; j < L; j += numThreads){
 						Zx8 f0 = dilate2x8(f[i + j + 0 * L] - mod2x8);
 						Zx8 f1 = mulZx8(f[i + j + 1 * L], r);
 						Zx8 f2 = mulZx8(f[i + j + 2 * L], r2);
@@ -281,50 +289,72 @@ namespace poly{
 					}
 					r = mulZsx8(r, iab4.rt3x8[cro_32(k)]);
 				}
+                pthread_barrier_wait(&barr_merge);
+			}
+				
+        }
+
+        
+
+        template<bool strict = false, int fixes = 0>void dif_base4x8(Z *A, int lim){
+			int n = lim >> 3, L = n >> 1;
+			Zx8 *f = RC(Zx8*, A);
+			if(__builtin_ctz(n) & 1){
+				for(int j = 0; j < L; ++j){
+					Zx8 x = f[j], y = f[j + L];
+					f[j] = x + y, f[j + L] = x - y + mod2x8;
+				}
+				L >>= 1;
 			}
 			
-			{
-				constexpr Zx8 _r = setu32x8(trans<fixes>(one_Z));
-				Zx8 r = _r, pr4 = iab4.pr4, pr2 = iab4.pr2;
-				
-				for(int i = 0; i < n; ++i){
-					Zx8& fi = f[i];
-					//0xaa:10101010 0xb1:10110001
-					//0xcc:11001100 0x4e:01001110
-					//0xf0:11110000
-					fi = mulZx8(fi, r), fi = Neg<0xf0>(fi) + RC(Zx8, swaplohi128(RC(I256, fi)));
-					fi = mulZx8(fi, pr4), fi = Neg<0xcc>(fi) + shuffle<0x4e>(fi);
-					fi = mulZx8(fi, pr2), fi = addZx8(Neg<0xaa>(fi), shuffle<0xb1>(fi));
-					if constexpr(strict){fi = shrinkx8(fi);}
-					r = mulZsx8(r, iab4.rt4ix8[cro_32(i)]);
-				}
-			}
+			L >>= 1;
+
+			
+
+            pthread_t threads[numThreads];
+            ButterflyData threadData[numThreads];
+
+            pthread_barrier_init(&barr_merge,NULL,numThreads);
+
+            for (int i = 0; i < numThreads; ++i) {
+                threadData[i] = {i,f,lim,L};
+                pthread_create(&threads[i], nullptr, dif_func, &threadData[i]);    
+            }
+
+            for (int i = 0; i < numThreads; ++i) {
+                pthread_join(threads[i], nullptr);
+            }
+            pthread_barrier_destroy(&barr_merge);
+			
+			
+            constexpr Zx8 _r = setu32x8(trans<fixes>(one_Z));
+            Zx8 r = _r, pr4 = iab4.pr4, pr2 = iab4.pr2;
+            
+            for(int i = 0; i < n; ++i){
+                Zx8& fi = f[i];
+                fi = mulZx8(fi, r), fi = Neg<0xf0>(fi) + RC(Zx8, swaplohi128(RC(I256, fi)));
+                fi = mulZx8(fi, pr4), fi = Neg<0xcc>(fi) + shuffle<0x4e>(fi);
+                fi = mulZx8(fi, pr2), fi = addZx8(Neg<0xaa>(fi), shuffle<0xb1>(fi));
+                if constexpr(strict){fi = shrinkx8(fi);}
+                r = mulZsx8(r, iab4.rt4ix8[cro_32(i)]);
+            }
+			
         }
-		//以4为基的指令集加速DIT式INTT 变换长度应当至少为8 且给出的指针需对32对齐
-		template<bool strict = false, int fixes = 0>void dit_base4x8(Z *A, int lim){
-			int n = lim >> 3, L = 1;
-			Zx8 *f = RC(Zx8*, A);
-			{
-				Zx8 r = setu32x8(trans<fixes + 1>(mod - ((mod - 1) / lim))), pr4 = iab4.pr4_I, pr2 = iab4.pr2_I;
-				for(int i = 0; i < n; ++i){
-					Zx8& fi = f[i];
-					//0xaa:10101010 0xb1:10110001
-					//
-					//0xcc:11001100 0x4e:01001110
-					//0xf0:11110000
-					//
-					fi = Neg<0xaa>(fi) + shuffle<0xb1>(fi), fi = mulZx8(fi, pr2);
-					fi = Neg<0xcc>(fi) + shuffle<0x4e>(fi), fi = mulZx8(fi, pr4);
-					fi = Neg<0xf0>(fi) + RC(Zx8, swaplohi128(RC(I256, fi))), fi = mulZx8(fi, r);
-					r = mulZsx8(r, iab4.rt4ix8_I[cro_32(i)]);
-				}
-			}
+
+        void* dit_func(void* arg){
+			ButterflyData* data = static_cast<ButterflyData*>(arg);
+            int id = data->id;
+            Zx8 *f = data->f;
+            int lim = data->lim;
+            int L = data->L;
+
+			int n = lim >> 3;
 
 			for (int R = L << 2; L < (n >> 1) ; L <<= 2, R <<= 2){
 				Zx8 r = one_Zx8, img = imag_Ix8;
 				for(int i = 0, k = 0; i < n; i += R, ++k){
 					Zx8 r2 = mulZsx8(r, r), r3 = mulZsx8(r2, r);
-					for(int j = 0; j < L; ++j){
+					for(int j = id; j < L; j += numThreads){
 						Zx8 f0 = f[i + j + 0 * L];
 						Zx8 f1 = f[i + j + 1 * L];
 						Zx8 f2 = f[i + j + 2 * L];
@@ -340,8 +370,46 @@ namespace poly{
 					}
 					r = mulZsx8(r, iab4.rt3x8_I[cro_32(k)]);
 				}
+                pthread_barrier_wait(&barr_merge);
 			}
+        }
+
+		template<bool strict = false, int fixes = 0>void dit_base4x8(Z *A, int lim){
+			int n = lim >> 3, L = 1;
+			
+			Zx8 *f = RC(Zx8*, A);
+            Zx8 r = setu32x8(trans<fixes + 1>(mod - ((mod - 1) / lim))), pr4 = iab4.pr4_I, pr2 = iab4.pr2_I;
+            for(int i = 0; i < n; ++i){
+                Zx8& fi = f[i];
+                fi = Neg<0xaa>(fi) + shuffle<0xb1>(fi), fi = mulZx8(fi, pr2);
+                fi = Neg<0xcc>(fi) + shuffle<0x4e>(fi), fi = mulZx8(fi, pr4);
+                fi = Neg<0xf0>(fi) + RC(Zx8, swaplohi128(RC(I256, fi))), fi = mulZx8(fi, r);
+                r = mulZsx8(r, iab4.rt4ix8_I[cro_32(i)]);
+            }
+
+			
+			
+            pthread_t threads[numThreads];
+            ButterflyData threadData[numThreads];
+
+            pthread_barrier_init(&barr_merge,NULL,numThreads);
+
+            for (int i = 0; i < numThreads; ++i) {
+                threadData[i] = {i,f,lim,L};
+                pthread_create(&threads[i], nullptr, dit_func, &threadData[i]);    
+            }
+
+            for (int i = 0; i < numThreads; ++i) {
+                pthread_join(threads[i], nullptr);
+            }
+            pthread_barrier_destroy(&barr_merge);
+
+			
+
 			if(__builtin_ctz(n) & 1){
+				while(L < (n >> 1)){
+					L <<= 2;
+				}
 				for(int j = 0; j < L; ++j){
 					Zx8 x = f[j], y = f[j + L];
 					f[j] = addZx8(x, y), f[j + L] = subZx8(x, y);
