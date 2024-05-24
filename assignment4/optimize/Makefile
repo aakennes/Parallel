@@ -1,5 +1,5 @@
 CC=/usr/bin/g++
-CFLAGS += -march=core-avx2 -fomit-frame-pointer -std=c++17
+CFLAGS += -march=core-avx2 -fomit-frame-pointer -std=c++17 -fopenmp
 #LDFLAGS=-lcrypto
 
 SOURCES= SIMD.cpp 

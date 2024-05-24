@@ -1,18 +1,26 @@
 #include<iostream>
 #include<algorithm>
-#include <immintrin.h>
-
-using i32 = int;
-using u32 = unsigned;
-using i64 = long long;
-using u64 = unsigned long long;
+#include<immintrin.h>
+#include<iostream>
+#include<sys/time.h>
+#include<chrono>
+#include"../params.h"
+using namespace std;
 
 #pragma GCC target("avx2")
 #define Vec(sz, T) __attribute((vector_size(sz))) T
 #define IL __inline__ __attribute__((always_inline))
 #define RC(T, x) reinterpret_cast<T>(x)
 
+const int p = 104857601; // 假设一个模数p
+const static int thread_count = 1;
 
+#define Mint MontgomeryModInt32<p>
+#define i32 int32_t
+#define u32 uint32_t
+#define i64 int64_t
+#define u64 uint64_t
+#define MMint u32
 
 constexpr u32 mod = 104857601;
 constexpr u32 G = 3;
@@ -80,6 +88,7 @@ namespace field_Z{
 		return calc::mulZs(x, fixes > 0 ? calc::powZ(Space.R2, fixes) : calc::powZ(1, -fixes));
 	}
 }
+
 namespace SIMD{
 	using i32x8 = Vec(32, i32);
 	using u32x8 = Vec(32, u32);
@@ -96,6 +105,7 @@ namespace SIMD{
 	IL void storeu(const I256 &x, void* data){return _mm256_storeu_si256(RC(__m256i_u*, data), x);}
 	IL u64x4 mulu32x8_fus(const u32x8 &x, const u32x8 &y){return RC(u64x4, _mm256_mul_epu32(RC(I256, x), RC(I256, y)));}
 }
+
 namespace field_Z{
 	using SIMD::x8;
 	using SIMD::u32x8;
@@ -136,15 +146,14 @@ namespace field_Z{
 #undef Vec
 
 namespace poly{
-	//多项式基础
+
 	namespace poly_base{
 		using namespace field_Z;
 		constexpr int bit_up(int x){return 1 << (32 - __builtin_clz(x));}
 		constexpr int cro_32(int x){return __builtin_ctz(~x);}
 		inline Z *to_align(void *mem){return RC(Z*, ((RC(u64, mem) + 31) >> 5) << 5);}
 		inline bool is_align(const void* mem){return (RC(u64, mem) & 31) == 0;}
-		//用于申请临时空间
-        //align用于申请对齐内存
+
 		namespace mem_helper{
 			char _mem[sta_l_MB << 20];
 			void *now = _mem;
@@ -172,10 +181,10 @@ namespace poly{
 	#undef flx
 }
 namespace poly{
-	//快速数论变换.基础 by QedDust413
+
 	namespace f_n_t_t_base{
 		using namespace calc;
-		//A[] *= t
+
 		template<bool strict = false>void mul_t(Z *A, int l, Z t){
 			for(int j = 0; j < l; ++j){
 				A[j] = mulZs<strict>(A[j], t);
@@ -248,36 +257,6 @@ namespace poly{
     namespace f_n_t_t{
 		using namespace f_n_t_t_base;
 		constexpr ntt_info_base2 ib2;
-		//dif-ntt 非注重性能的实现
-		template<bool strict = false, int fixes = 0>void dif_base2(Z *A, int lim){
-			for(int L = lim >> 1, R = lim; L; L >>= 1, R >>= 1){
-				Z r = one_Z;
-				for(int i = 0, k = 0; i < lim; i += R, ++k){
-					for(int j = 0; j < L; ++j){
-						Z x = dilate2(A[i + j] - mod2) , y = mulZ(r, A[i + j + L]);
-						A[i + j] = x + y, A[i + j + L] = x - y + mod2;
-					}
-					r = mulZs(r, ib2.rt2[cro_32(k)]);
-				}
-			}
-			if constexpr(fixes){
-				mul_t<strict>(A, lim, trans<fixes>(one_Z));
-			}
-		}
-		//dit-intt 非注重性能的实现
-		template<bool strict = false, int fixes = 0>void dit_base2(Z *A, int lim){
-			for(int L = 1, R = 2; L < lim; L <<= 1, R <<= 1){
-				Z r = one_Z;
-				for(int i = 0, k = 0; i < lim; i += R, ++k){
-					for(int j = 0; j < L; ++j){
-						Z x = A[i + j], y = A[i + j + L];
-						A[i + j] = addZ(x, y), A[i + j + L] = mulZ(x - y + mod2, r);
-					}
-					r = mulZs(r, ib2.rt2_I[cro_32(k)]);
-				}
-			}
-			mul_t<strict>(A, lim, trans<fixes + 1>(mod - ((mod - 1) / lim)));
-		}
 		constexpr Zx8 imagx8 = setu32x8(rt1[2]), imag_Ix8 = setu32x8(rt1_I[2]);
 		constexpr ntt_info_base4x8 iab4;
 		//以4为基的指令集加速DIF式NTT 变换长度应当至少为8 且给出的指针需对32对齐
@@ -292,64 +271,77 @@ namespace poly{
 				L >>= 1;
 			}
 			L >>= 1;
-			for(int R = L << 2; L; L >>= 2, R >>= 2){
-				Zx8 r = one_Zx8, img = imagx8;
-				for(int i = 0, k = 0; i < n; i += R, ++k){
-					Zx8 r2 = mulZsx8(r, r), r3 = mulZsx8(r2, r);
-					for(int j = 0; j < L; ++j){
-						Zx8 f0 = dilate2x8(f[i + j + 0 * L] - mod2x8);
-						Zx8 f1 = mulZx8(f[i + j + 1 * L], r);
-						Zx8 f2 = mulZx8(f[i + j + 2 * L], r2);
-						Zx8 f3 = mulZx8(f[i + j + 3 * L], r3);
-						Zx8 f1f3 = mulZx8(f1 - f3 + mod2x8, img);
-						Zx8 f02 = addZx8(f0, f2);
-						Zx8 f13 = addZx8(f1, f3);
-						Zx8 f_02 = subZx8(f0, f2);
-						f[i + j + 0 * L] = f02 + f13;
-						f[i + j + 1 * L] = f02 - f13 + mod2x8;
-						f[i + j + 2 * L] = f_02 + f1f3;
-						f[i + j + 3 * L] = f_02 - f1f3 + mod2x8;
-					}
-					r = mulZsx8(r, iab4.rt3x8[cro_32(k)]);
-				}
-			}
+
+
+                for(int R = L << 2; L; L >>= 2, R >>= 2){
+                    Zx8 r = one_Zx8, img = imagx8;
+			#pragma omp parallel num_threads(thread_count)
+            {
+                    #pragma omp for schedule(static, 1)
+                    for(int i = 0; i < n; i += R){
+                        int k = i / R;
+                        Zx8 r2 = mulZsx8(r, r), r3 = mulZsx8(r2, r);
+                        for(int j = 0; j < L; ++j){
+                            Zx8 f0 = dilate2x8(f[i + j + 0 * L] - mod2x8);
+                            Zx8 f1 = mulZx8(f[i + j + 1 * L], r);
+                            Zx8 f2 = mulZx8(f[i + j + 2 * L], r2);
+                            Zx8 f3 = mulZx8(f[i + j + 3 * L], r3);
+                            Zx8 f1f3 = mulZx8(f1 - f3 + mod2x8, img);
+                            Zx8 f02 = addZx8(f0, f2);
+                            Zx8 f13 = addZx8(f1, f3);
+                            Zx8 f_02 = subZx8(f0, f2);
+                            f[i + j + 0 * L] = f02 + f13;
+                            f[i + j + 1 * L] = f02 - f13 + mod2x8;
+                            f[i + j + 2 * L] = f_02 + f1f3;
+                            f[i + j + 3 * L] = f_02 - f1f3 + mod2x8;
+                        }
+                        r = mulZsx8(r, iab4.rt3x8[cro_32(k)]);
+                    }
+                }
+            }
+
+			constexpr Zx8 _r = setu32x8(trans<fixes>(one_Z));
+			Zx8 r = _r, pr4 = iab4.pr4, pr2 = iab4.pr2;
 			
-			{
-				constexpr Zx8 _r = setu32x8(trans<fixes>(one_Z));
-				Zx8 r = _r, pr4 = iab4.pr4, pr2 = iab4.pr2;
-				
-				for(int i = 0; i < n; ++i){
-					Zx8& fi = f[i];
-					fi = mulZx8(fi, r), fi = Neg<0xf0>(fi) + RC(Zx8, swaplohi128(RC(I256, fi)));
-					fi = mulZx8(fi, pr4), fi = Neg<0xcc>(fi) + shuffle<0x4e>(fi);
-					fi = mulZx8(fi, pr2), fi = addZx8(Neg<0xaa>(fi), shuffle<0xb1>(fi));
-					if constexpr(strict){fi = shrinkx8(fi);}
-					r = mulZsx8(r, iab4.rt4ix8[cro_32(i)]);
-				}
+			for(int i = 0; i < n; ++i){
+				Zx8& fi = f[i];
+				//0xaa:10101010 0xb1:10110001
+				//0xcc:11001100 0x4e:01001110
+				//0xf0:11110000
+				fi = mulZx8(fi, r), fi = Neg<0xf0>(fi) + RC(Zx8, swaplohi128(RC(I256, fi)));
+				fi = mulZx8(fi, pr4), fi = Neg<0xcc>(fi) + shuffle<0x4e>(fi);
+				fi = mulZx8(fi, pr2), fi = addZx8(Neg<0xaa>(fi), shuffle<0xb1>(fi));
+				if constexpr(strict){fi = shrinkx8(fi);}
+				r = mulZsx8(r, iab4.rt4ix8[cro_32(i)]);
+
 			}
         }
 		//以4为基的指令集加速DIT式INTT 变换长度应当至少为8 且给出的指针需对32对齐
 		template<bool strict = false, int fixes = 0>void dit_base4x8(Z *A, int lim){
 			int n = lim >> 3, L = 1;
+			
 			Zx8 *f = RC(Zx8*, A);
-			{
-				Zx8 r = setu32x8(trans<fixes + 1>(mod - ((mod - 1) / lim))), pr4 = iab4.pr4_I, pr2 = iab4.pr2_I;
-				for(int i = 0; i < n; ++i){
-					Zx8& fi = f[i];
-					//
-					//
-					//
-					//
-					fi = Neg<0xaa>(fi) + shuffle<0xb1>(fi), fi = mulZx8(fi, pr2);
-					fi = Neg<0xcc>(fi) + shuffle<0x4e>(fi), fi = mulZx8(fi, pr4);
-					fi = Neg<0xf0>(fi) + RC(Zx8, swaplohi128(RC(I256, fi))), fi = mulZx8(fi, r);
-					r = mulZsx8(r, iab4.rt4ix8_I[cro_32(i)]);
-				}
+			Zx8 r = setu32x8(trans<fixes + 1>(mod - ((mod - 1) / lim))), pr4 = iab4.pr4_I, pr2 = iab4.pr2_I;
+			for(int i = 0; i < n; ++i){
+				Zx8& fi = f[i];
+				//0xaa:10101010 0xb1:10110001
+				//
+				//0xcc:11001100 0x4e:01001110
+				//0xf0:11110000
+				//
+				fi = Neg<0xaa>(fi) + shuffle<0xb1>(fi), fi = mulZx8(fi, pr2);
+				fi = Neg<0xcc>(fi) + shuffle<0x4e>(fi), fi = mulZx8(fi, pr4);
+				fi = Neg<0xf0>(fi) + RC(Zx8, swaplohi128(RC(I256, fi))), fi = mulZx8(fi, r);
+				r = mulZsx8(r, iab4.rt4ix8_I[cro_32(i)]);
 			}
 
 			for (int R = L << 2; L < (n >> 1) ; L <<= 2, R <<= 2){
 				Zx8 r = one_Zx8, img = imag_Ix8;
-				for(int i = 0, k = 0; i < n; i += R, ++k){
+			#pragma omp parallel num_threads(thread_count)
+			{
+				#pragma omp for schedule(static, 1)
+				for(int i = 0; i < n; i += R){
+					int k = i / R;
 					Zx8 r2 = mulZsx8(r, r), r3 = mulZsx8(r2, r);
 					for(int j = 0; j < L; ++j){
 						Zx8 f0 = f[i + j + 0 * L];
@@ -368,65 +360,35 @@ namespace poly{
 					r = mulZsx8(r, iab4.rt3x8_I[cro_32(k)]);
 				}
 			}
+
+            }
+			
 			if(__builtin_ctz(n) & 1){
 				for(int j = 0; j < L; ++j){
 					Zx8 x = f[j], y = f[j + L];
 					f[j] = addZx8(x, y), f[j + L] = subZx8(x, y);
 				}
 			}
-			// if constexpr (strict){
-			// 	for(int i = 0; i < n; ++i){
-			// 		f[i] = shrinkx8(f[i]);
-			// 	}
-			// }
+			if constexpr (strict){
+				for(int i = 0; i < n; ++i){
+					f[i] = shrinkx8(f[i]);
+				}
+			}
 		}
 		//1E(lim)
 		template<bool strict = false, int fixes = 0>void dif(Z *A, int lim){
-			lim >= 16 ? dif_base4x8<strict, fixes>(A, lim) : dif_base2<strict, fixes>(A, lim);
+			dif_base4x8<strict, fixes>(A, lim);
 		}
 		//1E(lim)
 		template<bool strict = false, int fixes = 0>void dit(Z *A,int lim){
-			lim >= 16 ? dit_base4x8<strict, fixes>(A, lim) : dit_base2<strict, fixes>(A, lim);
+			dit_base4x8<strict, fixes>(A, lim);
 		}
     }
 	using f_n_t_t::dif;
 	using f_n_t_t::dit;
 }
 #undef Stati
-namespace Command{
-	void cut_string(){
-		_Exit(0);
-	}
-}
 
 using poly::alocP;
 using poly::pre_aloc;
 using namespace field_Z;
-
-
-#include<iostream>
-using namespace std;
-void solve(){
-	freopen("data/datain/NTT256_1409.in","r",stdin);
-	int n, m;
-	cin >> n >> m;
-	int limit = poly::bit_up(n + m);
-    // printf("%d\n",limit);
-	auto F = alocP(limit), G = alocP(limit);
-	for(int i = 0; i <= n; ++i){cin >> F[i];}
-	std::fill(F + n + 1, F + limit, zero_Z);
-	for(int i = 0; i <= m; ++i){cin >> G[i];}
-	std::fill(F + m + 1, F + limit, zero_Z);
-	poly::dif<false, 1>(F, limit), poly::dif<false, 1>(G, limit), poly::dot(F, limit, G), poly::dit<true, -1>(F, limit);
-	for(int i = 0; i <= n + m; ++i){cout << F[i] << ' ';}
-	// for(int i = 0; i < 23 - 1; ++i){
-	// 	std::cout<<poly::f_n_t_t::iab4.rt3x8[i][0]<<" ";
-	// 	// puts("");
-	// }
-}
-
-int main(){
-	std::cin.tie(nullptr) -> sync_with_stdio(false);
-	solve();
-	return 0;
-}
