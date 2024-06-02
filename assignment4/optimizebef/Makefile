@@ -1,5 +1,5 @@
 CC=/usr/bin/g++
-CFLAGS += -march=core-avx2 -fomit-frame-pointer -std=c++17 -fopenmp
+CFLAGS += -march=core-avx2 -fomit-frame-pointer -std=c++17 -fopenmp -O2
 #LDFLAGS=-lcrypto
 
 SOURCES= Math.cpp readwrite.cpp ntt.cpp main.cpp 

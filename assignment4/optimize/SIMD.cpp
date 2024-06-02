@@ -25,7 +25,7 @@ int main(){
 			auto F = alocP(limit), G = alocP(limit);
 			
 			for(int i = 0; i < n; ++i){cin >> f[i];}
-			for(int i = 0; i < m; ++i){cin >> f[i];}
+			for(int i = 0; i < m; ++i){cin >> g[i];}
 			
 			for(int k=1;k<=100;++k){
 				memcpy(F,f,sizeof(f));

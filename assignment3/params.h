@@ -84,4 +84,4 @@
 #define u64 uint64_t
 #define MMint u32
 
-#define numThreads 4
+#define numThreads 12

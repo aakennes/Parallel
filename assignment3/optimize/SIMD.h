@@ -270,6 +270,7 @@ namespace poly{
 			int n = lim >> 3;
 
 			for(int R = L << 2; L; L >>= 2, R >>= 2){
+				
 				Zx8 r = one_Zx8, img = imagx8;
 				for(int i = 0, k = 0; i < n; i += R, ++k){
 					Zx8 r2 = mulZsx8(r, r), r3 = mulZsx8(r2, r);
@@ -291,7 +292,7 @@ namespace poly{
 				}
                 pthread_barrier_wait(&barr_merge);
 			}
-				
+			return nullptr;
         }
 
         
@@ -372,6 +373,7 @@ namespace poly{
 				}
                 pthread_barrier_wait(&barr_merge);
 			}
+			return nullptr;
         }
 
 		template<bool strict = false, int fixes = 0>void dit_base4x8(Z *A, int lim){

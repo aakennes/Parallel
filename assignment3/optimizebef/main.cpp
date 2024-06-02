@@ -52,11 +52,11 @@ void time_test(){
                 // std::cout<<nn[i]<<" "<<qq[j]<<'\n';
                 auto Start=std::chrono::high_resolution_clock::now();
                 // ntt_common(a,b,ab,r,nn[i]);
-                // ntt_dif(a,b,ab,rt,irt,nn[i]);
-                // ntt_dif_x4(a,b,ab,rt,irt,nn[i]);
                 // ntt_Montgomery(a,b,ab,r,nn[i]);
                 // ntt_Montgomery_Mint(A,B,AB,r,nn[i]);
+                // ntt_dif(a,b,ab,rt,irt,nn[i]);
                 // ntt_dif_Mint(A,B,AB,RT,IRT,nn[i]);
+                // ntt_dif_x4(a,b,ab,rt,irt,nn[i]);
                 ntt_dif_x4_Mint(A,B,AB,RT,IRT,nn[i]);
                 auto End=std::chrono::high_resolution_clock::now();
                 std::chrono::duration<double,std::ratio<1,1000>>elapsed=End-Start;

@@ -2,7 +2,7 @@
 
 #define p Original_Q
 int W[100005];
-const int thread_count = 2;
+
 
 void ntt_common(int *a,int *r,int limit,int type){
     for(int i = 0; i < limit; i++) {

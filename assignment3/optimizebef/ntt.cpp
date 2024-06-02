@@ -32,7 +32,6 @@ void* ntt_common_func(void* arg) {
                 int x = a[j + k], y = 1LL * W[k] * a[j + k + mid] % p;
                 a[j + k] = (1LL * x + y) % p;
                 a[j + k + mid] = (1LL * x - y + p) % p;
-                
             }
         }
         pthread_barrier_wait(&barr_merge);

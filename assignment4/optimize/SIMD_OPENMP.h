@@ -13,7 +13,6 @@ using namespace std;
 #define RC(T, x) reinterpret_cast<T>(x)
 
 const int p = 104857601; // 假设一个模数p
-const static int thread_count = 1;
 
 #define Mint MontgomeryModInt32<p>
 #define i32 int32_t
