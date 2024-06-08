@@ -81,7 +81,7 @@ void ntt_common_mpi(int *a,int *b,int *ab,int *r,int n){
     if (my_rank == 0) {
         for (i = 0; i < limit; i++) {
             ab[i] = 1LL * a[i] * b[i] % p;
-            printf("%d ",ab[i]);
+            
         }
     }
     // ntt_common会把 thread 0 处理点值的结果 ab 分发
@@ -91,6 +91,7 @@ void ntt_common_mpi(int *a,int *b,int *ab,int *r,int n){
     int invn = qpow(limit, p - 2, p);
     for (i = 0; i < 2 * n; i++) {
         ab[i] = (1LL * ab[i] * invn) % p;
+        // printf("%d ",ab[i]);
     }
 }
 

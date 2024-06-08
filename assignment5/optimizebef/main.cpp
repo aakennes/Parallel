@@ -69,8 +69,8 @@ int main(){
     fclose(nmread);
     // std::cout<<xx<<" "<<yy<<'\n';
     FILE* fp;
-    // fRead(fp,a,b,nn[xx],qq[yy]);
-    fRead(fp,A,B,nn[xx],qq[yy]);
+    fRead(fp,a,b,nn[xx],qq[yy]);
+    // fRead(fp,A,B,nn[xx],qq[yy]);
     // freopen("1.in","r",stdin);
     // std::cin>>n>>n;
     // for(int i=0;i<n;++i)std::cin>>a[i];
@@ -78,10 +78,10 @@ int main(){
     double elapsed;
     MPI_Init(NULL, NULL);
     auto start_time = MPI_Wtime();
-    // ntt_common_mpi(a,b,ab,r,nn[xx]);
+    ntt_common_mpi(a,b,ab,r,nn[xx]);
     // ntt_Montgomery_Mint_mpi(A,B,AB,r,nn[xx]);
     // ntt_dif_x4_mpi(a,b,ab,rt,irt,nn[xx]);
-    ntt_dif_x4_Mint_mpi(A,B,AB,RT,IRT,nn[xx]);
+    // ntt_dif_x4_Mint_mpi(A,B,AB,RT,IRT,nn[xx]);
 
     
     int my_rank;

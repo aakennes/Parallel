@@ -15,7 +15,7 @@ int main(){
             system("make");
             
             for(int i=0;i<20;++i){
-                system("mpirun -np 4 main");
+                system("mpirun -np 2 main");
             }
             double ans=0;
             FILE* fileread=fopen("test.out","r+");
