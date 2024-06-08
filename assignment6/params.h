@@ -83,3 +83,6 @@
 #define i64 int64_t
 #define u64 uint64_t
 #define MMint u32
+
+
+#define thread_count 2
