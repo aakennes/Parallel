@@ -4,6 +4,7 @@
 #include<iostream>
 #include<sys/time.h>
 #include<chrono>
+#include"mpi.h"
 #include"../params.h"
 using namespace std;
 
@@ -300,26 +301,38 @@ namespace poly{
 				}
 			}
         }
+
+		void create_mpi_Zx8_type(MPI_Datatype *mpi_Zx8) {
+			MPI
+			
+	_Aint offsets[1];
+			int block_lengths[1] = {1};
+			MPI_Datatype types[1] = {MPI_UINT32_T};
+
+			offsets[0] = offsetof(Mint, v);
+
+			MPI_Type_create_struct(1, block_lengths, offsets, types, mpi_montgomerymodint32_type);
+			MPI_Type_commit(mpi_montgomerymodint32_type);
+		}
 		//以4为基的指令集加速DIT式INTT 变换长度应当至少为8 且给出的指针需对32对齐
 		template<bool strict = false, int fixes = 0>void dit_base4x8(Z *A, int lim){
 			int n = lim >> 3, L = 1;
 			Zx8 *f = RC(Zx8*, A);
-			{
-				Zx8 r = setu32x8(trans<fixes + 1>(mod - ((mod - 1) / lim))), pr4 = iab4.pr4_I, pr2 = iab4.pr2_I;
-				for(int i = 0; i < n; ++i){
-					Zx8& fi = f[i];
-					//0xaa:10101010 0xb1:10110001
-					//
-					//0xcc:11001100 0x4e:01001110
-					//0xf0:11110000
-					//
-					fi = Neg<0xaa>(fi) + shuffle<0xb1>(fi), fi = mulZx8(fi, pr2);
-					fi = Neg<0xcc>(fi) + shuffle<0x4e>(fi), fi = mulZx8(fi, pr4);
-					fi = Neg<0xf0>(fi) + RC(Zx8, swaplohi128(RC(I256, fi))), fi = mulZx8(fi, r);
-					r = mulZsx8(r, iab4.rt4ix8_I[cro_32(i)]);
-				}
+			
+			Zx8 r = setu32x8(trans<fixes + 1>(mod - ((mod - 1) / lim))), pr4 = iab4.pr4_I, pr2 = iab4.pr2_I;
+			for(int i = 0; i < n; ++i){
+				Zx8& fi = f[i];
+				//0xaa:10101010 0xb1:10110001
+				//
+				//0xcc:11001100 0x4e:01001110
+				//0xf0:11110000
+				//
+				fi = Neg<0xaa>(fi) + shuffle<0xb1>(fi), fi = mulZx8(fi, pr2);
+				fi = Neg<0xcc>(fi) + shuffle<0x4e>(fi), fi = mulZx8(fi, pr4);
+				fi = Neg<0xf0>(fi) + RC(Zx8, swaplohi128(RC(I256, fi))), fi = mulZx8(fi, r);
+				r = mulZsx8(r, iab4.rt4ix8_I[cro_32(i)]);
 			}
-
+			
 			for (int R = L << 2; L < (n >> 1) ; L <<= 2, R <<= 2){
 				Zx8 r = one_Zx8, img = imag_Ix8;
 				for(int i = 0, k = 0; i < n; i += R, ++k){
