@@ -1,5 +1,5 @@
 CC=mpic++
-CFLAGS += -fomit-frame-pointer -std=c++17 -fopenmp -O2
+CFLAGS += -fomit-frame-pointer -std=c++17 -fopenmp 
 #LDFLAGS=-lcrypto
 
 SOURCES= Math.cpp readwrite.cpp ntt.cpp main.cpp 

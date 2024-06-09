@@ -90,6 +90,7 @@ void ntt_common_mpi(int *a,int *b,int *ab,int *r,int n){
     int invn = qpow(limit, p - 2, p);
     for (i = 0; i < 2 * n; i++) {
         ab[i] = (1LL * ab[i] * invn) % p;
+        // std::cout << ab[i] << " ";
     }
 }
 
@@ -192,6 +193,7 @@ void ntt_common_mpi_openmp(int *a,int *b,int *ab,int *r,int n){
     int invn = qpow(limit, p - 2, p);
     for (i = 0; i < 2 * n; i++) {
         ab[i] = (1LL * ab[i] * invn) % p;
+        // std::cout << ab[i] << " ";
     }
 }
 
@@ -407,10 +409,9 @@ void ntt_Montgomery_Mint_mpi_openmp(Mint *a,Mint *b,Mint *ab,int *r,int n){
     
 }
 
-void ntt_dit_x4_mpi(int *a,int *dw,int imag,int limit,int level,int my_rank, int processCounts){
+void ntt_dit_x4_mpi(int *a,int *dw,int imag,int limit,int level,int my_rank, int threadCounts, int initial_w2[][4]){
     int one = 1;
     int logn = __builtin_ctz(limit);
-
     
     if (my_rank==0&&(logn&1)) {
         for (int i = 0; i < limit/2; i++) {
@@ -419,12 +420,12 @@ void ntt_dit_x4_mpi(int *a,int *dw,int imag,int limit,int level,int my_rank, int
             a[i + limit/2] = ((1LL*x - y)%p + p)%p;
         }
     }
-    int log_max=(logn & ~1)-(__builtin_ctz(processCounts));
+    int log_max=(logn & ~1)-(__builtin_ctz(threadCounts));
+    int SUBARRAY_SIZE = limit / threadCounts;
+    int *local_a = new int[SUBARRAY_SIZE];
     if (my_rank==0) {
-
         for (int e = logn & ~1; e > log_max; e -= 2) {
             const int m = 1 << e, m4 = m >> 2;
-            // std::cout<<m4<<'\n';
             int w2 = 1;
             for (int i = 0; i < limit; i += m) {
                 const int w1 = 1LL*w2 * w2 %p, w3 = 1LL*w1 * w2%p;
@@ -443,18 +444,13 @@ void ntt_dit_x4_mpi(int *a,int *dw,int imag,int limit,int level,int my_rank, int
         }
     }
 
-    int SUBARRAY_SIZE = limit / processCounts;
-    int *local_a = new int[SUBARRAY_SIZE];
-
-    // std::cout<<SUBARRAY_SIZE<<" "<<processCounts<<'\n';
-
+    
     MPI_Scatter(a, SUBARRAY_SIZE, MPI_INT, local_a, SUBARRAY_SIZE, MPI_INT, 0, MPI_COMM_WORLD);
     for (int e = log_max; e >= 2; e -= 2) {
         const int m = 1 << e, m4 = m >> 2;
-        int w2 = 1;
+        int w2 = initial_w2[e][my_rank];
         for (int i = 0; i < SUBARRAY_SIZE; i += m) {
             const int w1 = 1LL*w2 * w2 %p, w3 = 1LL*w1 * w2%p;
-            // std::cout<<my_rank<<" "<<i<<" "<<i+m4<<'\n';
             for (int j = i; j < i + m4; ++j) {
                 int a0 = 1LL*local_a[j + m4 * 0] * one%p, a1 = 1LL*local_a[j + m4 * 1] * w2%p;
                 int a2 = 1LL*local_a[j + m4 * 2] * w1%p, a3 = 1LL*local_a[j + m4 * 3] * w3%p;
@@ -465,28 +461,27 @@ void ntt_dit_x4_mpi(int *a,int *dw,int imag,int limit,int level,int my_rank, int
                 local_a[j + m4 * 2] = (1LL*t02m + t13m)%p;
                 local_a[j + m4 * 3] = ((1LL*t02m - t13m)%p+p)%p;
             }
-            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+            w2 = 1LL*w2*dw[__builtin_ctz(~((i+my_rank*SUBARRAY_SIZE) >> e))]%p;
         }
     }
-    // std::cout<<my_rank<<" "<<local_a[SUBARRAY_SIZE-1]<<'\n';
     MPI_Gather(local_a, SUBARRAY_SIZE, MPI_INT, a, SUBARRAY_SIZE, MPI_INT, 0, MPI_COMM_WORLD);
 
     MPI_Bcast(a, limit, MPI_INT, 0, MPI_COMM_WORLD);
 
     delete[] local_a;
 }
-void ntt_dif_x4_mpi(int *a,int *dw,int imag,int limit,int level, int my_rank, int processCounts){
+void ntt_dif_x4_mpi(int *a,int *dw,int imag,int limit,int level, int my_rank, int threadCounts, int initial_w2[][4]){
     int one = 1;
     int logn = __builtin_ctz(limit);
 
-    int logmax = logn - __builtin_ctz(processCounts);
-    // std::cout<<logmax<<" "<<__builtin_ctz(processCounts)<<'\n';
-    int SUBARRAY_SIZE = limit / processCounts;
+    int logmax = (logn & ~1);
+    int SUBARRAY_SIZE = limit / threadCounts;
     int *local_a = new int[SUBARRAY_SIZE];
+
     MPI_Scatter(a, SUBARRAY_SIZE, MPI_INT, local_a, SUBARRAY_SIZE, MPI_INT, 0, MPI_COMM_WORLD);
-    for (int e = 2; e <= logmax; e += 2) {
+    for (int e = 2; e < logmax; e += 2) {
         const int m = 1 << e, m4 = m >> 2;
-        int w2 = one;
+        int w2 = initial_w2[e][my_rank];
         for (int i = 0; i < SUBARRAY_SIZE; i += m) {
             const int w1 = 1LL*w2 * w2 %p, w3 = 1LL*w1 * w2 %p;
             for (int j = i; j < i + m4; ++j) {
@@ -499,16 +494,15 @@ void ntt_dif_x4_mpi(int *a,int *dw,int imag,int limit,int level, int my_rank, in
                 local_a[j + m4 * 1] = (1LL*t01m + t23m)%p*w2%p;
                 local_a[j + m4 * 3] = ((1LL*t01m - t23m)%p+p)%p*w3%p;
             }
-            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+            w2 = 1LL*w2*dw[__builtin_ctz(~((i+my_rank*SUBARRAY_SIZE) >> e))]%p;
         }
-        // printf("%d ",w2);
     }
     MPI_Gather(local_a, SUBARRAY_SIZE, MPI_INT, a, SUBARRAY_SIZE, MPI_INT, 0, MPI_COMM_WORLD);
     if(my_rank==0){
-        for (int e = logmax; e <= logmax; e += 2) {
+        for (int e = logmax; e <= (logn & ~1); e += 2) {
             const int m = 1 << e, m4 = m >> 2;
             int w2 = one;
-            for (int i = 0; i < SUBARRAY_SIZE; i += m) {
+            for (int i = 0; i < limit; i += m) {
                 const int w1 = 1LL*w2 * w2 %p, w3 = 1LL*w1 * w2 %p;
                 for (int j = i; j < i + m4; ++j) {
                     int a0 = a[j + m4 * 0], a1 = a[j + m4 * 1];
@@ -522,7 +516,6 @@ void ntt_dif_x4_mpi(int *a,int *dw,int imag,int limit,int level, int my_rank, in
                 }
                 w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
             }
-            // printf("%d ",w2);
         }
         if (logn&1) {
             for (int i = 0; i < limit/2; i++) {
@@ -540,9 +533,11 @@ void ntt_dif_x4_mpi(int *a,int *b,int *ab,int *rt,int *irt,int n){
     int L=0;
     int limit=1;
     int level=__builtin_ctzll(p - 1);
-    while(limit <= 2 * n-2){
+    
+    while(limit <= 2 * n-1){
         limit <<= 1, L++;
     } 
+    int logn = __builtin_ctz(limit);
     int wnn=3;
     wnn=qpow(wnn,(p-1)>>level,p);
     rt[0] = wnn;
@@ -557,44 +552,78 @@ void ntt_dif_x4_mpi(int *a,int *b,int *ab,int *rt,int *irt,int n){
     dw[level - 2] = 1LL*dw[level - 3] * irt[1]%p;
     int imag = rt[level-2];
 
-    int my_rank, processCounts;
+    int my_rank, threadCounts;
     MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &processCounts);
+    MPI_Comm_size(MPI_COMM_WORLD, &threadCounts);
 
-    ntt_dit_x4_mpi(a,dw,imag,limit,level,my_rank,processCounts);
-    ntt_dit_x4_mpi(b,dw,imag,limit,level,my_rank,processCounts);
+    int log_max=(logn & ~1)-(__builtin_ctz(threadCounts));
+    int SUBARRAY_SIZE = limit / threadCounts;
+    int initial_w2[level][4];
+    
+    for (int e = log_max; e >= 2; e -= 2) {
+        const int m = 1 << e, m4 = m >> 2;
+        int w2 = 1;
+        initial_w2[e][0] = 1;
+        for (int i = 0; i < SUBARRAY_SIZE; i += m) {
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+        }
+        initial_w2[e][1] = w2;
+        for (int i = SUBARRAY_SIZE; i < SUBARRAY_SIZE*2; i += m) {
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+        }
+        initial_w2[e][2] = w2;
+        for (int i = SUBARRAY_SIZE*2; i < SUBARRAY_SIZE*3; i += m) {
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+        }
+        initial_w2[e][3] = w2;
+    }
+
+    ntt_dit_x4_mpi(a,dw,imag,limit,level,my_rank,threadCounts,initial_w2);
+    ntt_dit_x4_mpi(b,dw,imag,limit,level,my_rank,threadCounts,initial_w2);
 
     if (my_rank == 0) {
-        // printf("%d\n",b[255]);
-        
         for(int i = 0;i<limit;i++){
-            ab[i]=1LL*a[i]*b[i]%p;
-            
+            ab[i]=1LL*a[i]*b[i]%p;   
         }
-        // printf("%d %d %d\n",a[0],b[0],ab[0]);
-        // printf("%d ",ab[limit-1]);
+    }
 
-        dw[0] = irt[level - 3];
-        for (int i = 1; i < level - 2; i++)
-            dw[i] = 1LL*dw[i - 1] * rt[level - 1 - i]%p * irt[level - 3 - i]%p;
-        dw[level - 2] = 1LL*dw[level - 3] * rt[1]%p;
-        imag = irt[level-2];
+    dw[0] = irt[level - 3];
+    for (int i = 1; i < level - 2; i++)
+        dw[i] = 1LL*dw[i - 1] * rt[level - 1 - i]%p * irt[level - 3 - i]%p;
+    dw[level - 2] = 1LL*dw[level - 3] * rt[1]%p;
+    imag = irt[level-2];
+
+    log_max=(logn & ~1);
+    for (int e = 2; e <= log_max; e += 2) {
+        const int m = 1 << e, m4 = m >> 2;
+        int w2 = 1;
+        initial_w2[e][0] = 1;
+        for (int i = 0; i < SUBARRAY_SIZE; i += m) {
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+        }
+        initial_w2[e][1] = w2;
+        for (int i = SUBARRAY_SIZE; i < SUBARRAY_SIZE*2; i += m) {
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+        }
+        initial_w2[e][2] = w2;
+        for (int i = SUBARRAY_SIZE*2; i < SUBARRAY_SIZE*3; i += m) {
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+        }
+        initial_w2[e][3] = w2;
     }
     
 
-	ntt_dif_x4_mpi(ab,dw,imag,limit,level,my_rank,processCounts);
+	ntt_dif_x4_mpi(ab,dw,imag,limit,level,my_rank,threadCounts,initial_w2);
     int invn=qpow(limit,p-2,p);
     for(int i = 0; i < 2 * n; i++){
         ab[i] = (1LL * ab[i] * invn) % p;
-        // printf("%d ",ab[i]);
-    } 
+        // std::cout<<ab[i] << " ";
+    }
 }
 
-void ntt_dit_x4_mpi_openmp(int *a,int *dw,int imag,int limit,int level,int my_rank, int processCounts){
+void ntt_dit_x4_mpi_openmp(int *a,int *dw,int imag,int limit,int level,int my_rank, int threadCounts, int initial_w2[][4]){
     int one = 1;
     int logn = __builtin_ctz(limit);
-
-
     
     if (my_rank==0&&(logn&1)) {
         for (int i = 0; i < limit/2; i++) {
@@ -603,13 +632,14 @@ void ntt_dit_x4_mpi_openmp(int *a,int *dw,int imag,int limit,int level,int my_ra
             a[i + limit/2] = ((1LL*x - y)%p + p)%p;
         }
     }
-    int log_max=(logn & ~1)-(__builtin_ctz(processCounts));
+    int log_max=(logn & ~1)-(__builtin_ctz(threadCounts));
+    int SUBARRAY_SIZE = limit / threadCounts;
+    int *local_a = new int[SUBARRAY_SIZE];
     if (my_rank==0) {
         #pragma omp parallel num_threads(thread_count)
         {
             for (int e = logn & ~1; e > log_max; e -= 2) {
                 const int m = 1 << e, m4 = m >> 2;
-                // std::cout<<m4<<'\n';
                 int w2 = 1;
                 #pragma omp for schedule(static)
                 for (int i = 0; i < limit; i += m) {
@@ -630,21 +660,17 @@ void ntt_dit_x4_mpi_openmp(int *a,int *dw,int imag,int limit,int level,int my_ra
         }
     }
 
-    int SUBARRAY_SIZE = limit / processCounts;
-    int *local_a = new int[SUBARRAY_SIZE];
-
-    // std::cout<<SUBARRAY_SIZE<<" "<<processCounts<<'\n';
-
+    
     MPI_Scatter(a, SUBARRAY_SIZE, MPI_INT, local_a, SUBARRAY_SIZE, MPI_INT, 0, MPI_COMM_WORLD);
     #pragma omp parallel num_threads(thread_count)
-    {
+    {   
+
         for (int e = log_max; e >= 2; e -= 2) {
             const int m = 1 << e, m4 = m >> 2;
-            int w2 = 1;
+            int w2 = initial_w2[e][my_rank];
             #pragma omp for schedule(static)
             for (int i = 0; i < SUBARRAY_SIZE; i += m) {
                 const int w1 = 1LL*w2 * w2 %p, w3 = 1LL*w1 * w2%p;
-                // std::cout<<my_rank<<" "<<i<<" "<<i+m4<<'\n';
                 for (int j = i; j < i + m4; ++j) {
                     int a0 = 1LL*local_a[j + m4 * 0] * one%p, a1 = 1LL*local_a[j + m4 * 1] * w2%p;
                     int a2 = 1LL*local_a[j + m4 * 2] * w1%p, a3 = 1LL*local_a[j + m4 * 3] * w3%p;
@@ -655,34 +681,31 @@ void ntt_dit_x4_mpi_openmp(int *a,int *dw,int imag,int limit,int level,int my_ra
                     local_a[j + m4 * 2] = (1LL*t02m + t13m)%p;
                     local_a[j + m4 * 3] = ((1LL*t02m - t13m)%p+p)%p;
                 }
-                w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+                w2 = 1LL*w2*dw[__builtin_ctz(~((i+my_rank*SUBARRAY_SIZE) >> e))]%p;
             }
-        }    
+        }
     }
 
-
-    // std::cout<<my_rank<<" "<<local_a[SUBARRAY_SIZE-1]<<'\n';
     MPI_Gather(local_a, SUBARRAY_SIZE, MPI_INT, a, SUBARRAY_SIZE, MPI_INT, 0, MPI_COMM_WORLD);
 
     MPI_Bcast(a, limit, MPI_INT, 0, MPI_COMM_WORLD);
 
     delete[] local_a;
 }
-void ntt_dif_x4_mpi_openmp(int *a,int *dw,int imag,int limit,int level, int my_rank, int processCounts){
+void ntt_dif_x4_mpi_openmp(int *a,int *dw,int imag,int limit,int level, int my_rank, int threadCounts, int initial_w2[][4]){
     int one = 1;
     int logn = __builtin_ctz(limit);
 
-    int logmax = logn - __builtin_ctz(processCounts);
-    // std::cout<<logmax<<" "<<__builtin_ctz(processCounts)<<'\n';
-    int SUBARRAY_SIZE = limit / processCounts;
+    int logmax = (logn & ~1);
+    int SUBARRAY_SIZE = limit / threadCounts;
     int *local_a = new int[SUBARRAY_SIZE];
+
     MPI_Scatter(a, SUBARRAY_SIZE, MPI_INT, local_a, SUBARRAY_SIZE, MPI_INT, 0, MPI_COMM_WORLD);
     #pragma omp parallel num_threads(thread_count)
-    {
-
-        for (int e = 2; e <= logmax; e += 2) {
+    {   
+        for (int e = 2; e < logmax; e += 2) {
             const int m = 1 << e, m4 = m >> 2;
-            int w2 = one;
+            int w2 = initial_w2[e][my_rank];
             #pragma omp for schedule(static)
             for (int i = 0; i < SUBARRAY_SIZE; i += m) {
                 const int w1 = 1LL*w2 * w2 %p, w3 = 1LL*w1 * w2 %p;
@@ -696,23 +719,20 @@ void ntt_dif_x4_mpi_openmp(int *a,int *dw,int imag,int limit,int level, int my_r
                     local_a[j + m4 * 1] = (1LL*t01m + t23m)%p*w2%p;
                     local_a[j + m4 * 3] = ((1LL*t01m - t23m)%p+p)%p*w3%p;
                 }
-                w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+                w2 = 1LL*w2*dw[__builtin_ctz(~((i+my_rank*SUBARRAY_SIZE) >> e))]%p;
             }
-            // printf("%d ",w2);
         }
-
     }
 
     MPI_Gather(local_a, SUBARRAY_SIZE, MPI_INT, a, SUBARRAY_SIZE, MPI_INT, 0, MPI_COMM_WORLD);
     if(my_rank==0){
         #pragma omp parallel num_threads(thread_count)
         {
-
-            for (int e = logmax; e <= logmax; e += 2) {
+            for (int e = logmax; e <= (logn & ~1); e += 2) {
                 const int m = 1 << e, m4 = m >> 2;
                 int w2 = one;
                 #pragma omp for schedule(static)
-                for (int i = 0; i < SUBARRAY_SIZE; i += m) {
+                for (int i = 0; i < limit; i += m) {
                     const int w1 = 1LL*w2 * w2 %p, w3 = 1LL*w1 * w2 %p;
                     for (int j = i; j < i + m4; ++j) {
                         int a0 = a[j + m4 * 0], a1 = a[j + m4 * 1];
@@ -726,9 +746,7 @@ void ntt_dif_x4_mpi_openmp(int *a,int *dw,int imag,int limit,int level, int my_r
                     }
                     w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
                 }
-                // printf("%d ",w2);
             }
-            
         }
 
         if (logn&1) {
@@ -747,9 +765,11 @@ void ntt_dif_x4_mpi_openmp(int *a,int *b,int *ab,int *rt,int *irt,int n){
     int L=0;
     int limit=1;
     int level=__builtin_ctzll(p - 1);
-    while(limit <= 2 * n-2){
+    
+    while(limit <= 2 * n-1){
         limit <<= 1, L++;
     } 
+    int logn = __builtin_ctz(limit);
     int wnn=3;
     wnn=qpow(wnn,(p-1)>>level,p);
     rt[0] = wnn;
@@ -764,37 +784,73 @@ void ntt_dif_x4_mpi_openmp(int *a,int *b,int *ab,int *rt,int *irt,int n){
     dw[level - 2] = 1LL*dw[level - 3] * irt[1]%p;
     int imag = rt[level-2];
 
-    int my_rank, processCounts;
+    int my_rank, threadCounts;
     MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
-    MPI_Comm_size(MPI_COMM_WORLD, &processCounts);
+    MPI_Comm_size(MPI_COMM_WORLD, &threadCounts);
 
-    ntt_dit_x4_mpi_openmp(a,dw,imag,limit,level,my_rank,processCounts);
-    ntt_dit_x4_mpi_openmp(b,dw,imag,limit,level,my_rank,processCounts);
+    int log_max=(logn & ~1)-(__builtin_ctz(threadCounts));
+    int SUBARRAY_SIZE = limit / threadCounts;
+    int initial_w2[level][4];
+    
+    for (int e = log_max; e >= 2; e -= 2) {
+        const int m = 1 << e, m4 = m >> 2;
+        int w2 = 1;
+        initial_w2[e][0] = 1;
+        for (int i = 0; i < SUBARRAY_SIZE; i += m) {
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+        }
+        initial_w2[e][1] = w2;
+        for (int i = SUBARRAY_SIZE; i < SUBARRAY_SIZE*2; i += m) {
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+        }
+        initial_w2[e][2] = w2;
+        for (int i = SUBARRAY_SIZE*2; i < SUBARRAY_SIZE*3; i += m) {
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+        }
+        initial_w2[e][3] = w2;
+    }
+
+    ntt_dit_x4_mpi_openmp(a,dw,imag,limit,level,my_rank,threadCounts,initial_w2);
+    ntt_dit_x4_mpi_openmp(b,dw,imag,limit,level,my_rank,threadCounts,initial_w2);
 
     if (my_rank == 0) {
-        // printf("%d\n",b[255]);
-        
         for(int i = 0;i<limit;i++){
-            ab[i]=1LL*a[i]*b[i]%p;
-            
+            ab[i]=1LL*a[i]*b[i]%p;   
         }
-        // printf("%d %d %d\n",a[0],b[0],ab[0]);
-        // printf("%d ",ab[limit-1]);
+    }
 
-        dw[0] = irt[level - 3];
-        for (int i = 1; i < level - 2; i++)
-            dw[i] = 1LL*dw[i - 1] * rt[level - 1 - i]%p * irt[level - 3 - i]%p;
-        dw[level - 2] = 1LL*dw[level - 3] * rt[1]%p;
-        imag = irt[level-2];
+    dw[0] = irt[level - 3];
+    for (int i = 1; i < level - 2; i++)
+        dw[i] = 1LL*dw[i - 1] * rt[level - 1 - i]%p * irt[level - 3 - i]%p;
+    dw[level - 2] = 1LL*dw[level - 3] * rt[1]%p;
+    imag = irt[level-2];
+
+    log_max=(logn & ~1);
+    for (int e = 2; e <= log_max; e += 2) {
+        const int m = 1 << e, m4 = m >> 2;
+        int w2 = 1;
+        initial_w2[e][0] = 1;
+        for (int i = 0; i < SUBARRAY_SIZE; i += m) {
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+        }
+        initial_w2[e][1] = w2;
+        for (int i = SUBARRAY_SIZE; i < SUBARRAY_SIZE*2; i += m) {
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+        }
+        initial_w2[e][2] = w2;
+        for (int i = SUBARRAY_SIZE*2; i < SUBARRAY_SIZE*3; i += m) {
+            w2 = 1LL*w2*dw[__builtin_ctz(~(i >> e))]%p;
+        }
+        initial_w2[e][3] = w2;
     }
     
 
-	ntt_dif_x4_mpi_openmp(ab,dw,imag,limit,level,my_rank,processCounts);
+	ntt_dif_x4_mpi_openmp(ab,dw,imag,limit,level,my_rank,threadCounts,initial_w2);
     int invn=qpow(limit,p-2,p);
     for(int i = 0; i < 2 * n; i++){
         ab[i] = (1LL * ab[i] * invn) % p;
-        // printf("%d ",ab[i]);
-    } 
+        // std::cout<<ab[i] << " ";
+    }
 }
 
 void ntt_dit_x4_Mint_mpi(Mint *a,Mint *dw,Mint imag,int limit,int level,int my_rank, int processCounts, Mint initial_w2[][4], MPI_Datatype mpi_montgomerymodint32_type){
@@ -1014,6 +1070,7 @@ void ntt_dif_x4_Mint_mpi(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt,int n){
     Mint invn=1/Limit;
     for(int i = 0; i < 2 * n; i++){
         ab[i] = ab[i] * invn;
+        // std::cout << ab[i] << " ";
     }
     
 }
@@ -1455,6 +1512,7 @@ void ntt_dif_x4_Mint(Mint *a,Mint *b,Mint *ab,Mint *rt,Mint *irt,int n){
     Mint invn=1/Limit;
     for(int i = 0; i < 2 * n; i++){
         ab[i] = ab[i] * invn;
+        // std::cout << ab[i] << " ";
     } 
 }
 
