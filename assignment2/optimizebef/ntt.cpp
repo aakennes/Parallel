@@ -264,7 +264,6 @@ void ntt_dif(int *a,int *b,int *ab,int *rt,int *irt,int n){
             std::swap(rt[i], rt[j]);
             std::swap(irt[i], irt[j]);
         }
-        // printf("%d ",rt[i]);
         for (int t = limit >> 1; (j ^= t) < t; t >>= 1);
     }
     ntt_dit(a,rt,limit);
