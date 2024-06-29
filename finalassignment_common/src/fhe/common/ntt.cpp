@@ -226,10 +226,10 @@ void intt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
 
 void cache_ntt_factors_strict(const u64 log_dimension,
                               const std::vector<u64> &moduli) {
-    for (auto modulus : moduli) {
-        __find_or_create_ntt_factors(modulus, log_dimension);
-        __find_or_create_ntt_factors(modulus, log_dimension, true);
-    }
+    // for (auto modulus : moduli) {
+    //     __find_or_create_ntt_factors(modulus, log_dimension);
+    //     __find_or_create_ntt_factors(modulus, log_dimension, true);
+    // }
 }
 
 } // namespace hehub

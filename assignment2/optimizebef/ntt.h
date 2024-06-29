@@ -14,6 +14,9 @@ void ntt_common(int *a,int *r,int limit,int type);
 void ntt_barrett(int *a,int *b,int *ab,int *r,int n);
 void ntt_barrett(int *a,int *r,int limit,int type);
 
+void ntt_barrett_pre(int *a,int *b,int *ab,int *r,int n);
+void ntt_barrett_pre(int *a,int *r,int limit,int type);
+
 void ntt_Montgomery(int *a,int *b,int *ab,int *r,int n);
 void ntt_Montgomery(int *a,int *r,int limit,int type);
 
