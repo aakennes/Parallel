@@ -35,8 +35,16 @@ void poly_mul(){
         std::cout<<aabb[i]<<" ";
     }
 }
+void GenerateData(int n,int q){
+    for(int i=0;i<n;++i){
+        a[i]=rand()%q;
+        b[i]=rand()%q;
+        A[i]=a[i];
+        B[i]=b[i];
+    }
+}
 int nn[11]={256,512,1024,2048,4096,8192,16384,32768,65536,131072};
-int qq[5]={1409,3329,7681,12289};
+int qq[5]={1409,3329,7681,12289,12289999};
 #include<sys/time.h>
 #include<chrono>
 void time_test(){
@@ -44,19 +52,21 @@ void time_test(){
     for(int i=0;i<=9;++i){
         for(int j=0;j<=3;++j){
             long double ans=0;
+            GenerateData(nn[i],qq[j]);
             int cnt=100;
             for(int k=1;k<=100;++k){
-                FILE* fp;
-                fRead(fp,A,B,nn[i],qq[j]);
+                // FILE* fp;
+                // fRead(fp,a,b,nn[i],qq[j]);
                 // std::cout<<nn[i]<<" "<<qq[j]<<'\n';
                 auto Start=std::chrono::high_resolution_clock::now();
                 // ntt_common(a,b,ab,r,nn[i]);
+                ntt_barrett(a,b,ab,r,nn[i]);
                 // ntt_dif(a,b,ab,rt,irt,nn[i]);
                 // ntt_dif_x4(a,b,ab,rt,irt,nn[i]);
                 // ntt_Montgomery(a,b,ab,r,nn[i]);
                 // ntt_Montgomery_Mint(A,B,AB,r,nn[i]);
                 // ntt_dif_Mint(A,B,AB,RT,IRT,nn[i]);
-                ntt_dif_x4_Mint(A,B,AB,RT,IRT,nn[i]);
+                // ntt_dif_x4_Mint(A,B,AB,RT,IRT,nn[i]);
                 auto End=std::chrono::high_resolution_clock::now();
                 std::chrono::duration<double,std::ratio<1,1000>>elapsed=End-Start;
                 ans+=elapsed.count();
@@ -68,26 +78,26 @@ void time_test(){
     
 }
 int main(){
-    // time_test();
-    FILE* fp;
-    fRead(fp,a,b,nn[0],qq[0]);
-    // poly_mul();
-    // ntt_common(a,b,ab,r);
-    // ntt_dif(a,b,ab,rt,irt);
-    // ntt_dif_x4(a,b,ab,rt,irt);
-    // for(int i=0;i<nn[0];++i)std::cout<<a[i]<<" ";
+    // std::cout<<barrett_sub(5,6,31)<<'\n';
+    time_test();
+    // FILE* fp;
+    // fRead(fp,a,b,nn[0],qq[0]);
+    // // // poly_mul();
+    // // ntt_common(a,b,ab,r,nn[0]);
+    // ntt_barrett(a,b,ab,r,nn[0]);
+    // for(int i=0;i<nn[0];++i)std::cout<<ab[i]<<" ";
     // ntt_Montgomery(a,b,ab,r,nn[0]);
-    for(int i=0;i<nn[0];++i)aa[i]=In((u32)a[i]);
-    for(int i=0;i<nn[0];++i)bb[i]=In((u32)b[i]);
+    // for(int i=0;i<nn[0];++i)aa[i]=In((u32)a[i]);
+    // for(int i=0;i<nn[0];++i)bb[i]=In((u32)b[i]);
     // std::cout<<aa[0]<<"\n";
-    ntt_Montgomery_MMint(aa,bb,aabb,r,nn[0]);
+    // ntt_Montgomery_MMint(aa,bb,aabb,r,nn[0]);
     // std::cout<<get(aabb[1])<<'\n';
     // for(int i=0;i<nn[0]*2-1;++i)std::cout<<get(aabb[i])<<" ";
     // fWrite(fp,ab,n);
     // puts("a--------------");
-    fRead(fp,A,B,nn[0],qq[0]);
+    // fRead(fp,A,B,nn[0],qq[0]);
     // std::cout<<A[0].getv()<<'\n';
-    ntt_Montgomery_Mint(A,B,AB,r,nn[0]);
+    // ntt_Montgomery_Mint(A,B,AB,r,nn[0]);
     // std::cout<<AB[0]<<'\n';
     // ntt_dif_Mint(A,B,AB,RT,IRT);
     // ntt_dif_x4_Mint(A,B,AB,RT,IRT);

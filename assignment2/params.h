@@ -82,4 +82,6 @@
 #define u32 uint32_t
 #define i64 int64_t
 #define u64 uint64_t
+#define u128 __uint128_t
+#define i128 __int128
 #define MMint u32

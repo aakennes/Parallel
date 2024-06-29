@@ -5,10 +5,21 @@
 
 #include "../params.h"
 
+const u64 barret_y = ((u128)1 << 64) / Original_Q;
 
 int qpow(int a,int x,int p);
 
 void findw(int countw,int wn[]);
+
+int barrett_mod(int a,int b);
+
+int barrett_add(int a,int b,int p);
+
+int barrett_sub(int a,int b,int p);
+
+int barrett_mul(int a,int b,int p);
+
+int barrett_qpow(int a,int x,int p);
 
 template <std::uint32_t P> 
 struct MontgomeryModInt32 {

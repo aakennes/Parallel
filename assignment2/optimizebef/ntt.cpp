@@ -36,8 +36,9 @@ void ntt_common(int *a,int *b,int *ab,int *r,int n){
     }
     ntt_common(a,r,limit, 1);
     ntt_common(b,r,limit, 1);
+    // printf("%d\n",b[0]);
 	for(i = 0; i < limit; i++){
-        // printf("%d\n",b[i]);
+        
         ab[i] = 1LL * a[i] * b[i] % p;
     } 
 	ntt_common(ab,r,limit, -1);
@@ -49,7 +50,73 @@ void ntt_common(int *a,int *b,int *ab,int *r,int n){
     } 
 
 }
+#define BARRETT_ADD(a, b, p) ({ \
+    i64 aa = (i64)(a) + (b); \
+    u64 x = aa - (((i128)(aa) * (barret_y)) >> 64) * (p); \
+    if (x >= (p)) x -= (p); \
+    x; \
+})
 
+#define BARRETT_SUB(a, b, p) ({ \
+    i64 aa = (a) - (b); \
+    if (aa < 0) aa += (p); \
+    aa; \
+})
+
+#define BARRETT_MUL(a, b, p) ({ \
+    i64 aa = (i64)(a) * (b); \
+    u64 x = aa - (((i128)(aa) * (barret_y)) >> 64) * (p); \
+    if (x >= (p)) x -= (p); \
+    x; \
+})
+void ntt_barrett(int *a,int *r,int limit,int type){
+    for(int i = 0; i < limit; i++) {
+		if(i < r[i]){
+            std::swap(a[i], a[r[i]]);
+        }
+    }
+    int wnn = 3;
+    int invwnn = BARRETT_ADD(wnn, p-2, p);
+	for(int mid = 1; mid < limit; mid <<= 1) {	
+		int Wn = barrett_qpow( type == 1 ? wnn : invwnn , (p - 1) / (mid << 1),p);
+		for(int j = 0; j < limit; j += (mid << 1)) {
+			int w = 1;
+			for(int k = 0; k < mid; k++, w = BARRETT_MUL(w,Wn,p)) {
+                int x = a[j + k], y = BARRETT_MUL(w, a[j+k+mid], p);
+                a[j + k] = BARRETT_ADD(x,y,p);
+                a[j + k + mid] = BARRETT_SUB(x,y,p);
+			}
+		}
+	}
+}
+
+void ntt_barrett(int *a,int *b,int *ab,int *r,int n){
+    
+    int L=0,i=0;
+    int limit=1;
+    while(limit <= 2 * n-2){
+        limit <<= 1, L++;
+    } 
+    // printf("%d\n",limit);
+	for(i = 0; i < limit; i++) {
+        r[i] = (r[i >> 1] >> 1) | ((i & 1) << (L - 1));
+    }
+    ntt_barrett(a,r,limit, 1);
+    ntt_barrett(b,r,limit, 1);
+    // printf("%d\n",b[0]);
+	for(i = 0; i < limit; i++){
+        ab[i] = BARRETT_MUL(a[i] ,b[i],p);
+    } 
+	ntt_barrett(ab,r,limit, -1);
+    int invn=BARRETT_ADD(limit,p-2,p);
+    // std::cout<<invn<<'\n';
+    for(i = 0; i < 2*n; i++){
+        ab[i] = BARRETT_MUL(ab[i] ,invn,p);
+    } 
+}
+#undef BARRETT_ADD
+#undef BARRETT_SUB
+#undef BARRETT_MUL
 void ntt_Montgomery(int *a,int *r,int limit,int type){
     
     for(int i = 0; i < limit; i++) {

@@ -73,7 +73,10 @@ void time_test(){
     
 }
 int main(){
-    time_test();
+    freopen("1.in","r",stdin);
+    freopen("1.out","w",stdout);
+    // for(int i=0;i<=)
+    // time_test();
     // findw(countw,wn);
     // FILE* fp;
     // fRead(fp,a,b,n);
