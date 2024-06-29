@@ -21,6 +21,8 @@ int barrett_mul(int a,int b,int p);
 
 int barrett_qpow(int a,int x,int p);
 
+u64 __bit_rev_naive_16(u64 x, int bit_len);
+
 template <std::uint32_t P> 
 struct MontgomeryModInt32 {
 

@@ -22,7 +22,6 @@ int qpow(int a,int x,int p){
 template <std::uint32_t P> 
 struct MontgomeryModInt32 {
 public:
-
     u32 v;
 private:
     const static u32 Montr = 104857599;
@@ -151,6 +150,20 @@ u64 __get_2nth_unity_root(u64 modulus, u64 n) {
     return root;
 }
 
+u64 __get_nth_unity_root(u64 modulus, u64 n) {
+    if ((modulus - 1) % n != 0) {
+        throw std::invalid_argument("N doesn't divide (modulus - 1)");
+    }
+    u64 candidate = 2;
+    while (true) {
+        if (__pow_mod(modulus, candidate, (modulus - 1)/2) == modulus - 1) {
+            break;
+        }
+        candidate++;
+    }
+    return candidate;
+}
+
 struct NTTFactors {
     NTTFactors(u64 modulus, size_t log_dimension, bool for_inverse = false) {
         const size_t log_modulus = (u64)(log2(modulus) + 0.5);
@@ -159,49 +172,11 @@ struct NTTFactors {
                 "NTT not supporting primes with bit size > 59 currently.");
         }
         size_t dimension = 1 << log_dimension;
-
-        const u64 root_of_2nth = __get_2nth_unity_root(modulus, dimension);
-        if (!for_inverse) {
-            seq.resize(dimension);
-            seq_harvey.resize(dimension);
-            for (size_t i = 0; i < dimension; i++) {
-                seq[i] = __pow_mod(modulus, root_of_2nth,
-                                   __bit_rev_naive_16(i, log_dimension));
-                seq_harvey[i] = ((u128)seq[i] << 64) / modulus;
-            }
-        } else {
-            seq.resize(dimension * 2);
-            seq_harvey.resize(dimension * 2);
-            auto root_of_2nth_inv =
-                __pow_mod(modulus, root_of_2nth, 2 * dimension - 1);
-            for (size_t l = 0; l < log_dimension; l++) {
-                auto start = (1 << l) - 1;
-                auto power_index_factor = 1 << (log_dimension - l);
-                for (size_t i = 0; i < (1 << l); i++) {
-                    auto idx = start + i;
-                    seq[idx] =
-                        __pow_mod(modulus, root_of_2nth_inv,
-                                  __bit_rev_naive_16(i, l) * power_index_factor);
-                    seq_harvey[idx] = ((u128)seq[idx] << 64) / modulus;
-                }
-            }
-            const u64 dimension_inv = modulus - ((modulus - 1) >> log_dimension);
-            const u64 dimension_inv_harvey =
-                ((u128)dimension_inv << 64) / modulus;
-            for (size_t i = 0; i < dimension; i++) {
-                auto temp = __pow_mod(modulus, root_of_2nth_inv, i);
-                auto idx = i + dimension;
-                seq[idx] = mul_mod_harvey_lazy(modulus, temp, dimension_inv,
-                                               dimension_inv_harvey);
-                seq[idx] -= (seq[idx] >= modulus) ? modulus : 0;
-                seq_harvey[idx] = ((u128)seq[idx] << 64) / modulus;
-            }
-
-            shuffled_indices.resize(dimension);
-            for (size_t i = 0; i < dimension; i++) {
-                shuffled_indices[i] = __bit_rev_naive_16(i, log_dimension);
-            }
+        shuffled_indices.resize(dimension,0);
+        for (size_t i = 0; i < dimension; i++) {
+            shuffled_indices[i] = (shuffled_indices[i >> 1] >> 1) | ((i & 1) << (log_dimension - 1));
         }
+        // printf("%lu\n",shuffled_indices[1]);
     }
 
     NTTFactors(const NTTFactors &copying) = default;
@@ -209,10 +184,6 @@ struct NTTFactors {
     NTTFactors(NTTFactors &&moving) = default;
 
     ~NTTFactors() {}
-
-    std::vector<u64> seq;
-
-    std::vector<u64> seq_harvey;
 
     std::vector<size_t> shuffled_indices;
 };
@@ -261,87 +232,73 @@ void ntt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
     // generate or read from cache
     const auto &ntt_factors =
         __find_or_create_ntt_factors(modulus, log_dimension);
-    
-    constexpr u32 mod = modulus;
-    std::vector<MontgomeryModInt32<mod>> mincoeffs(15);
-    size_t level, start, data_step, h, l;
-    size_t idx = 1;
-    u64 temp, zeta, zeta_harvey;
-    for (level = 1, data_step = dimension; level <= log_dimension;
-         level++, data_step >>= 1) {
-        auto gap = data_step / 2;
-        for (start = 0; start < dimension; start += data_step, idx++) {
-            zeta = ntt_factors.seq[idx];
-            zeta_harvey = ntt_factors.seq_harvey[idx];
-            for (l = start; l < start + gap; l++) {
-                h = l + gap;
-                temp =
-                    mul_mod_harvey_lazy(modulus, coeffs[h], zeta, zeta_harvey);
-                coeffs[h] = coeffs[l] + 2 * modulus - temp;
-                coeffs[l] = coeffs[l] + temp;
-            }
+    const u64 root_of_2nth = __get_nth_unity_root(modulus, dimension);
+    auto root_of_2nth_inv =
+                __pow_mod(modulus, root_of_2nth, modulus-2);
+    for(int i = 0; i < dimension; i++) {
+		if(i < ntt_factors.shuffled_indices[i]){
+            std::swap(coeffs[i], coeffs[ntt_factors.shuffled_indices[i]]);
+            
         }
+        // if(i<=5)printf("%d %lu\n",i,ntt_factors.shuffled_indices[i]);
     }
-
-    const u64 log_modulus = (u64)(log2(modulus) + 0.5);
-    const u64 div_fix = (modulus >= (1ULL << log_modulus)) ? 1 : 0;
-    for (size_t i = 0; i < dimension; i++) {
-        coeffs[i] -= ((coeffs[i] >> log_modulus) - div_fix) * modulus;
-    }
+    // printf("%lu %lu %lu ",root_of_2nth,root_of_2nth_inv,coeffs[0]);
+    for(int mid = 1; mid < dimension; mid <<= 1) {
+        auto Wn = __pow_mod(modulus, root_of_2nth, (modulus - 1) / (mid << 1));
+		for(int j = 0; j < dimension; j += (mid << 1)) {
+			u64 w = 1;
+			for(int k = 0; k < mid; k++, w = ((u128)w * Wn) % modulus) {
+                auto x = coeffs[j + k];
+                auto y = (u128)w * coeffs[j + k + mid] % modulus;             
+                coeffs[j + k] = ((u128)x + y) % modulus,
+                coeffs[j + k + mid] = ((u128)x - y + modulus) % modulus;
+			}
+		}
+	}
+    // printf("%lu\n",coeffs[0]);
 }
 
 void intt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
                                   u64 values[]) {
     const size_t dimension = 1ULL << log_dimension;
+    // printf("%lu\n",modulus);
     // generate or read from cache
     const auto &intt_factors =
         __find_or_create_ntt_factors(modulus, log_dimension, true);
-
-    u64 values_shuffled[dimension];
-    const auto &shuffled_indices = intt_factors.shuffled_indices;
-    for (size_t i = 0; i < dimension; i++) {
-        values_shuffled[i] = values[shuffled_indices[i]];
-    }
-
-    size_t level, start, data_step, h, l;
-    size_t idx = 0;
-    u64 temp, zeta, zeta_harvey;
-    for (level = 1, data_step = dimension; level <= log_dimension;
-         level++, data_step >>= 1) {
-        auto gap = data_step / 2;
-        for (start = 0; start < dimension; start += data_step, idx++) {
-            zeta = intt_factors.seq[idx];
-            zeta_harvey = intt_factors.seq_harvey[idx];
-            for (l = start; l < start + gap; l++) {
-                h = l + gap;
-                temp = mul_mod_harvey_lazy(modulus, values_shuffled[h], zeta,
-                                           zeta_harvey);
-                values_shuffled[h] = values_shuffled[l] + 2 * modulus - temp;
-                values_shuffled[l] = values_shuffled[l] + temp;
-            }
+    const u64 root_of_2nth = __get_nth_unity_root(modulus, dimension);
+    // printf("");
+    auto root_of_2nth_inv =
+                __pow_mod(modulus, root_of_2nth, modulus-2);
+    for(int i = 0; i < dimension; i++) {
+		if(i < intt_factors.shuffled_indices[i]){
+            std::swap(values[i], values[intt_factors.shuffled_indices[i]]);
         }
     }
-
-    for (size_t i = 0; i < dimension; i++) {
-        values[i] = values_shuffled[shuffled_indices[i]];
-    }
-
-    const u64 log_modulus = (u64)(log2(modulus) + 0.5);
-    const u64 div_fix = (modulus >= (1ULL << log_modulus)) ? 1 : 0;
-    idx++;
-    for (size_t i = 0; i < dimension; i++, idx++) {
-        values[i] -= ((values[i] >> log_modulus) - div_fix) * modulus;
-        values[i] =
-            mul_mod_harvey_lazy(modulus, values[i], intt_factors.seq[idx],
-                                intt_factors.seq_harvey[idx]);
-    }
+    for(int mid = 1; mid < dimension; mid <<= 1) {
+        auto Wn = __pow_mod(modulus, root_of_2nth_inv, (modulus - 1) / (mid << 1));
+		for(int j = 0; j < dimension; j += (mid << 1)) {
+			u64 w = 1;
+			for(int k = 0; k < mid; k++, w = ((u128)w * Wn) % modulus) {
+                auto x = values[j + k];
+                auto y = (u128)w * values[j + k + mid] % modulus;             
+                values[j + k] = ((u128)x + y) % modulus,
+                values[j + k + mid] = ((u128)x - y + modulus) % modulus;
+			}
+		}
+	}
+    auto invn=__pow_mod(modulus,dimension,modulus-2);
+    
+    // std::cout<<invn<<'\n';
+    for(size_t i = 0; i < dimension; i++){
+        values[i] = ((u128)values[i] * invn) % modulus;
+    } 
 }
 
 void cache_ntt_factors_strict(const u64 log_dimension,
                               const std::vector<u64> &moduli) {
     for (auto modulus : moduli) {
-        // __find_or_create_ntt_factors(modulus, log_dimension);
-        // __find_or_create_ntt_factors(modulus, log_dimension, true);
+        __find_or_create_ntt_factors(modulus, log_dimension);
+        __find_or_create_ntt_factors(modulus, log_dimension, true);
     }
 }
 

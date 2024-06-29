@@ -15,7 +15,7 @@ int main() {
     auto relin_key = get_relin_key(sk, params.additional_mod);
 
     CkksCt ct_sum;
-    for (int i = 1; i <= 100; i++) {
+    for (int i = 1; i <= 1; i++) {
         
         auto pt = ckks::encode(1.0 / i, params);//not ntt/intt
         auto ct = ckks::encrypt(pt, sk);

@@ -47,8 +47,7 @@ void ntt_common(int *a,int *b,int *ab,int *r,int n){
     // std::cout<<invn<<'\n';
     for(i = 0; i < 2*n; i++){
         ab[i] = (1LL * ab[i] * invn) % p;
-    } 
-
+    }
 }
 #define BARRETT_ADD(a, b, p) ({ \
     i64 aa = (i64)(a) + (b); \

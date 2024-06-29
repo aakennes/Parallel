@@ -151,6 +151,10 @@ void ntt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
     size_t level, start, data_step, h, l;
     size_t idx = 1;
     u64 temp, zeta;
+    const u64 root_of_2nth = __get_2nth_unity_root(modulus, dimension);
+    auto root_of_2nth_inv =
+                __pow_mod(modulus, root_of_2nth, 2 * dimension - 1);
+    printf("%lu %lu %lu ",root_of_2nth,root_of_2nth_inv,coeffs[0]);
     for (level = 1, data_step = dimension; level <= log_dimension;
          level++, data_step >>= 1) {
         auto gap = data_step / 2;
@@ -173,11 +177,13 @@ void ntt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
     for (size_t i = 0; i < dimension; i++) {
         coeffs[i] -= ((coeffs[i] >> log_modulus) - div_fix) * modulus;
     }
+    printf("%lu\n",coeffs[0]);
 }
 
 void intt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
                                   u64 values[]) {
     const size_t dimension = 1ULL << log_dimension;
+    // printf("%lu\n",values[0]);
     // generate or read from cache
     const auto &intt_factors =
         __find_or_create_ntt_factors(modulus, log_dimension, true);
@@ -215,8 +221,10 @@ void intt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
     const u64 log_modulus = (u64)(log2(modulus) + 0.5);
     const u64 div_fix = (modulus >= (1ULL << log_modulus)) ? 1 : 0;
     idx++;
+    
     for (size_t i = 0; i < dimension; i++, idx++) {
         values[i] -= ((values[i] >> log_modulus) - div_fix) * modulus;
+        
         // values[i] =
         //     mul_mod_harvey_lazy(modulus, values[i], intt_factors.seq[idx],
         //                         intt_factors.seq_harvey[idx]);

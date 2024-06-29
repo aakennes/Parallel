@@ -24,6 +24,28 @@ void findw(int countw,int wn[])
     }
 }
 
+u64 __get_2nth_unity_root(u64 modulus, u64 n) {
+    if ((modulus - 1) % (2 * n) != 0) {
+        throw std::invalid_argument("2N doesn't divide (modulus - 1)");
+    }
+    u64 candidate = 2;
+    while (true) {
+        if (qpow(candidate, (modulus - 1) / 2,modulus) == modulus - 1) {
+            break;
+        }
+        candidate++;
+    }
+    return qpow( candidate, (modulus - 1) / (2 * n), modulus);
+}
+
+u64 __bit_rev_naive_16(u64 x, int bit_len){
+    x = ((x & 0xFF00FF00) >> 8) | ((x & 0x00FF00FF) << 8);
+    x = ((x & 0xF0F0F0F0) >> 4) | ((x & 0x0F0F0F0F) << 4);
+    x = ((x & 0xCCCCCCCC) >> 2) | ((x & 0x33333333) << 2);
+    x = ((x & 0xAAAAAAAA) >> 1) | ((x & 0x55555555) << 1);
+    return x >> (16 - bit_len);
+}
+
 int barrett_mod(int a,int b){
     u128 y = (((u128)1 << 64) / b)>> 64;
     u64 x = a - ((u128)a * y) * b;
