@@ -608,7 +608,7 @@ build cmake_object_order_depends_target_hehub: phony || src/fhe/CMakeFiles/hehub
 build src/fhe/CMakeFiles/hehub.dir/common/rns.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/common/rns.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/common
@@ -616,7 +616,7 @@ build src/fhe/CMakeFiles/hehub.dir/common/rns.cpp.o: CXX_COMPILER__hehub_unscann
 build src/fhe/CMakeFiles/hehub.dir/common/bigint.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/common/bigint.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/common
@@ -624,7 +624,7 @@ build src/fhe/CMakeFiles/hehub.dir/common/bigint.cpp.o: CXX_COMPILER__hehub_unsc
 build src/fhe/CMakeFiles/hehub.dir/common/mod_arith.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/common/mod_arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/common
@@ -632,7 +632,7 @@ build src/fhe/CMakeFiles/hehub.dir/common/mod_arith.cpp.o: CXX_COMPILER__hehub_u
 build src/fhe/CMakeFiles/hehub.dir/common/ntt.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/common/ntt.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/common
@@ -640,7 +640,7 @@ build src/fhe/CMakeFiles/hehub.dir/common/ntt.cpp.o: CXX_COMPILER__hehub_unscann
 build src/fhe/CMakeFiles/hehub.dir/common/rns_transform.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/common/rns_transform.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/common
@@ -648,7 +648,7 @@ build src/fhe/CMakeFiles/hehub.dir/common/rns_transform.cpp.o: CXX_COMPILER__heh
 build src/fhe/CMakeFiles/hehub.dir/common/sampling.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/common/sampling.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/common
@@ -656,7 +656,7 @@ build src/fhe/CMakeFiles/hehub.dir/common/sampling.cpp.o: CXX_COMPILER__hehub_un
 build src/fhe/CMakeFiles/hehub.dir/common/permutation.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/common/permutation.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/common
@@ -664,7 +664,7 @@ build src/fhe/CMakeFiles/hehub.dir/common/permutation.cpp.o: CXX_COMPILER__hehub
 build src/fhe/CMakeFiles/hehub.dir/common/primelists.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/common/primelists.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/common
@@ -672,7 +672,7 @@ build src/fhe/CMakeFiles/hehub.dir/common/primelists.cpp.o: CXX_COMPILER__hehub_
 build src/fhe/CMakeFiles/hehub.dir/primitives/rlwe.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/primitives/rlwe.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/primitives
@@ -680,7 +680,7 @@ build src/fhe/CMakeFiles/hehub.dir/primitives/rlwe.cpp.o: CXX_COMPILER__hehub_un
 build src/fhe/CMakeFiles/hehub.dir/primitives/rgsw.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/primitives/rgsw.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/primitives
@@ -688,7 +688,7 @@ build src/fhe/CMakeFiles/hehub.dir/primitives/rgsw.cpp.o: CXX_COMPILER__hehub_un
 build src/fhe/CMakeFiles/hehub.dir/primitives/keys.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/primitives/keys.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/primitives
@@ -696,7 +696,7 @@ build src/fhe/CMakeFiles/hehub.dir/primitives/keys.cpp.o: CXX_COMPILER__hehub_un
 build src/fhe/CMakeFiles/hehub.dir/bgv/arith.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/bgv/arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/bgv
@@ -704,7 +704,7 @@ build src/fhe/CMakeFiles/hehub.dir/bgv/arith.cpp.o: CXX_COMPILER__hehub_unscanne
 build src/fhe/CMakeFiles/hehub.dir/bgv/basics.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/bgv/basics.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/bgv
@@ -712,7 +712,7 @@ build src/fhe/CMakeFiles/hehub.dir/bgv/basics.cpp.o: CXX_COMPILER__hehub_unscann
 build src/fhe/CMakeFiles/hehub.dir/bgv/mod_switch.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/bgv/mod_switch.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/bgv
@@ -720,7 +720,7 @@ build src/fhe/CMakeFiles/hehub.dir/bgv/mod_switch.cpp.o: CXX_COMPILER__hehub_uns
 build src/fhe/CMakeFiles/hehub.dir/ckks/basics.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/ckks/basics.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/ckks
@@ -728,7 +728,7 @@ build src/fhe/CMakeFiles/hehub.dir/ckks/basics.cpp.o: CXX_COMPILER__hehub_unscan
 build src/fhe/CMakeFiles/hehub.dir/ckks/arith.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/ckks/arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/ckks
@@ -736,7 +736,7 @@ build src/fhe/CMakeFiles/hehub.dir/ckks/arith.cpp.o: CXX_COMPILER__hehub_unscann
 build src/fhe/CMakeFiles/hehub.dir/ckks/rescaling.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/ckks/rescaling.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/ckks
@@ -744,7 +744,7 @@ build src/fhe/CMakeFiles/hehub.dir/ckks/rescaling.cpp.o: CXX_COMPILER__hehub_uns
 build src/fhe/CMakeFiles/hehub.dir/tfhe/func_boot.cpp.o: CXX_COMPILER__hehub_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp || cmake_object_order_depends_target_hehub
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = src/fhe/CMakeFiles/hehub.dir/tfhe/func_boot.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/fhe/CMakeFiles/hehub.dir
   OBJECT_FILE_DIR = src/fhe/CMakeFiles/hehub.dir/tfhe
@@ -1269,7 +1269,7 @@ build cmake_object_order_depends_target_hehub-circuits: phony || cmake_object_or
 build src/circuits/CMakeFiles/hehub-circuits.dir/linear_algebra.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/circuits/linear_algebra.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/linear_algebra.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
@@ -1277,7 +1277,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/linear_algebra.cpp.o: CXX_COMPI
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/rns.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/rns.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common
@@ -1285,7 +1285,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/rns.cpp.o: CXX_CO
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/bigint.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/bigint.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common
@@ -1293,7 +1293,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/bigint.cpp.o: CXX
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/mod_arith.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/mod_arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common
@@ -1301,7 +1301,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/mod_arith.cpp.o: 
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/ntt.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/ntt.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common
@@ -1309,7 +1309,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/ntt.cpp.o: CXX_CO
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/rns_transform.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/rns_transform.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common
@@ -1317,7 +1317,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/rns_transform.cpp
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/sampling.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/sampling.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common
@@ -1325,7 +1325,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/sampling.cpp.o: C
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/permutation.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/permutation.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common
@@ -1333,7 +1333,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/permutation.cpp.o
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/primelists.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/primelists.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common
@@ -1341,7 +1341,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/primelists.cpp.o:
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/rlwe.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/rlwe.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives
@@ -1349,7 +1349,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/rlwe.cpp.o: C
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/rgsw.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/rgsw.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives
@@ -1357,7 +1357,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/rgsw.cpp.o: C
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/keys.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/keys.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives
@@ -1365,7 +1365,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/keys.cpp.o: C
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/arith.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv
@@ -1373,7 +1373,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/arith.cpp.o: CXX_COM
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/basics.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/basics.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv
@@ -1381,7 +1381,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/basics.cpp.o: CXX_CO
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/mod_switch.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/mod_switch.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv
@@ -1389,7 +1389,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/mod_switch.cpp.o: CX
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/basics.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/basics.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks
@@ -1397,7 +1397,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/basics.cpp.o: CXX_C
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/arith.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks
@@ -1405,7 +1405,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/arith.cpp.o: CXX_CO
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/rescaling.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/rescaling.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks
@@ -1413,7 +1413,7 @@ build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/rescaling.cpp.o: CX
 build src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/tfhe/func_boot.cpp.o: CXX_COMPILER__hehub-circuits_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp || cmake_object_order_depends_target_hehub-circuits
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS
   DEP_FILE = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/tfhe/func_boot.cpp.o.d
-  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = src/circuits/CMakeFiles/hehub-circuits.dir
   OBJECT_FILE_DIR = src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/tfhe
@@ -1531,7 +1531,7 @@ build cmake_object_order_depends_target_tests: phony || cmake_object_order_depen
 build tests/CMakeFiles/tests.dir/tests.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/tests/tests.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/tests.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir
@@ -1539,7 +1539,7 @@ build tests/CMakeFiles/tests.dir/tests.cpp.o: CXX_COMPILER__tests_unscanned_Debu
 build tests/CMakeFiles/tests.dir/common_t.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/tests/common_t.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/common_t.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir
@@ -1547,7 +1547,7 @@ build tests/CMakeFiles/tests.dir/common_t.cpp.o: CXX_COMPILER__tests_unscanned_D
 build tests/CMakeFiles/tests.dir/bigint_t.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/tests/bigint_t.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/bigint_t.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir
@@ -1555,7 +1555,7 @@ build tests/CMakeFiles/tests.dir/bigint_t.cpp.o: CXX_COMPILER__tests_unscanned_D
 build tests/CMakeFiles/tests.dir/mod_arith_t.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/tests/mod_arith_t.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/mod_arith_t.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir
@@ -1563,7 +1563,7 @@ build tests/CMakeFiles/tests.dir/mod_arith_t.cpp.o: CXX_COMPILER__tests_unscanne
 build tests/CMakeFiles/tests.dir/ntt_t.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/tests/ntt_t.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/ntt_t.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir
@@ -1571,7 +1571,7 @@ build tests/CMakeFiles/tests.dir/ntt_t.cpp.o: CXX_COMPILER__tests_unscanned_Debu
 build tests/CMakeFiles/tests.dir/rlwe_t.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/tests/rlwe_t.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/rlwe_t.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir
@@ -1579,7 +1579,7 @@ build tests/CMakeFiles/tests.dir/rlwe_t.cpp.o: CXX_COMPILER__tests_unscanned_Deb
 build tests/CMakeFiles/tests.dir/bgv_t.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/tests/bgv_t.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/bgv_t.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir
@@ -1587,7 +1587,7 @@ build tests/CMakeFiles/tests.dir/bgv_t.cpp.o: CXX_COMPILER__tests_unscanned_Debu
 build tests/CMakeFiles/tests.dir/ckks_t.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/tests/ckks_t.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/ckks_t.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir
@@ -1595,7 +1595,7 @@ build tests/CMakeFiles/tests.dir/ckks_t.cpp.o: CXX_COMPILER__tests_unscanned_Deb
 build tests/CMakeFiles/tests.dir/lin_alg_t.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/tests/lin_alg_t.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/lin_alg_t.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir
@@ -1603,7 +1603,7 @@ build tests/CMakeFiles/tests.dir/lin_alg_t.cpp.o: CXX_COMPILER__tests_unscanned_
 build tests/CMakeFiles/tests.dir/__/src/fhe/common/rns.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/common/rns.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/common
@@ -1611,7 +1611,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/common/rns.cpp.o: CXX_COMPILER__test
 build tests/CMakeFiles/tests.dir/__/src/fhe/common/bigint.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/common/bigint.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/common
@@ -1619,7 +1619,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/common/bigint.cpp.o: CXX_COMPILER__t
 build tests/CMakeFiles/tests.dir/__/src/fhe/common/mod_arith.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/common/mod_arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/common
@@ -1627,7 +1627,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/common/mod_arith.cpp.o: CXX_COMPILER
 build tests/CMakeFiles/tests.dir/__/src/fhe/common/ntt.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/common/ntt.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/common
@@ -1635,7 +1635,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/common/ntt.cpp.o: CXX_COMPILER__test
 build tests/CMakeFiles/tests.dir/__/src/fhe/common/rns_transform.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/common/rns_transform.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/common
@@ -1643,7 +1643,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/common/rns_transform.cpp.o: CXX_COMP
 build tests/CMakeFiles/tests.dir/__/src/fhe/common/sampling.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/common/sampling.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/common
@@ -1651,7 +1651,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/common/sampling.cpp.o: CXX_COMPILER_
 build tests/CMakeFiles/tests.dir/__/src/fhe/common/permutation.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/common/permutation.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/common
@@ -1659,7 +1659,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/common/permutation.cpp.o: CXX_COMPIL
 build tests/CMakeFiles/tests.dir/__/src/fhe/common/primelists.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/common/primelists.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/common
@@ -1667,7 +1667,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/common/primelists.cpp.o: CXX_COMPILE
 build tests/CMakeFiles/tests.dir/__/src/fhe/primitives/rlwe.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/primitives/rlwe.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/primitives
@@ -1675,7 +1675,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/primitives/rlwe.cpp.o: CXX_COMPILER_
 build tests/CMakeFiles/tests.dir/__/src/fhe/primitives/rgsw.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/primitives/rgsw.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/primitives
@@ -1683,7 +1683,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/primitives/rgsw.cpp.o: CXX_COMPILER_
 build tests/CMakeFiles/tests.dir/__/src/fhe/primitives/keys.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/primitives/keys.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/primitives
@@ -1691,7 +1691,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/primitives/keys.cpp.o: CXX_COMPILER_
 build tests/CMakeFiles/tests.dir/__/src/fhe/bgv/arith.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/bgv/arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/bgv
@@ -1699,7 +1699,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/bgv/arith.cpp.o: CXX_COMPILER__tests
 build tests/CMakeFiles/tests.dir/__/src/fhe/bgv/basics.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/bgv/basics.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/bgv
@@ -1707,7 +1707,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/bgv/basics.cpp.o: CXX_COMPILER__test
 build tests/CMakeFiles/tests.dir/__/src/fhe/bgv/mod_switch.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/bgv/mod_switch.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/bgv
@@ -1715,7 +1715,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/bgv/mod_switch.cpp.o: CXX_COMPILER__
 build tests/CMakeFiles/tests.dir/__/src/fhe/ckks/basics.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/ckks/basics.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/ckks
@@ -1723,7 +1723,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/ckks/basics.cpp.o: CXX_COMPILER__tes
 build tests/CMakeFiles/tests.dir/__/src/fhe/ckks/arith.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/ckks/arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/ckks
@@ -1731,7 +1731,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/ckks/arith.cpp.o: CXX_COMPILER__test
 build tests/CMakeFiles/tests.dir/__/src/fhe/ckks/rescaling.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/ckks/rescaling.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/ckks
@@ -1739,7 +1739,7 @@ build tests/CMakeFiles/tests.dir/__/src/fhe/ckks/rescaling.cpp.o: CXX_COMPILER__
 build tests/CMakeFiles/tests.dir/__/src/fhe/tfhe/func_boot.cpp.o: CXX_COMPILER__tests_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp || cmake_object_order_depends_target_tests
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = tests/CMakeFiles/tests.dir/__/src/fhe/tfhe/func_boot.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits
   OBJECT_DIR = tests/CMakeFiles/tests.dir
   OBJECT_FILE_DIR = tests/CMakeFiles/tests.dir/__/src/fhe/tfhe
@@ -1856,7 +1856,7 @@ build cmake_object_order_depends_target_benchmarks: phony || cmake_object_order_
 build bench/CMakeFiles/benchmarks.dir/benchmarks.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/bench/benchmarks.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/benchmarks.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir
@@ -1864,7 +1864,7 @@ build bench/CMakeFiles/benchmarks.dir/benchmarks.cpp.o: CXX_COMPILER__benchmarks
 build bench/CMakeFiles/benchmarks.dir/mod_arith_bm.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/bench/mod_arith_bm.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/mod_arith_bm.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir
@@ -1872,7 +1872,7 @@ build bench/CMakeFiles/benchmarks.dir/mod_arith_bm.cpp.o: CXX_COMPILER__benchmar
 build bench/CMakeFiles/benchmarks.dir/ntt_bm.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/bench/ntt_bm.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/ntt_bm.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir
@@ -1880,7 +1880,7 @@ build bench/CMakeFiles/benchmarks.dir/ntt_bm.cpp.o: CXX_COMPILER__benchmarks_uns
 build bench/CMakeFiles/benchmarks.dir/ckks_bm.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/bench/ckks_bm.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/ckks_bm.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir
@@ -1888,7 +1888,7 @@ build bench/CMakeFiles/benchmarks.dir/ckks_bm.cpp.o: CXX_COMPILER__benchmarks_un
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/rns.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/rns.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common
@@ -1896,7 +1896,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/rns.cpp.o: CXX_COMPILER_
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/bigint.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/bigint.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common
@@ -1904,7 +1904,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/bigint.cpp.o: CXX_COMPIL
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/mod_arith.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/mod_arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common
@@ -1912,7 +1912,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/mod_arith.cpp.o: CXX_COM
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/ntt.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/ntt.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common
@@ -1920,7 +1920,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/ntt.cpp.o: CXX_COMPILER_
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/rns_transform.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/rns_transform.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common
@@ -1928,7 +1928,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/rns_transform.cpp.o: CXX
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/sampling.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/sampling.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common
@@ -1936,7 +1936,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/sampling.cpp.o: CXX_COMP
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/permutation.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/permutation.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common
@@ -1944,7 +1944,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/permutation.cpp.o: CXX_C
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/primelists.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/primelists.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/common
@@ -1952,7 +1952,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/primelists.cpp.o: CXX_CO
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/rlwe.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/rlwe.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives
@@ -1960,7 +1960,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/rlwe.cpp.o: CXX_COMP
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/rgsw.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/rgsw.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives
@@ -1968,7 +1968,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/rgsw.cpp.o: CXX_COMP
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/keys.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/keys.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives
@@ -1976,7 +1976,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/keys.cpp.o: CXX_COMP
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/arith.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv
@@ -1984,7 +1984,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/arith.cpp.o: CXX_COMPILER__
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/basics.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/basics.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv
@@ -1992,7 +1992,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/basics.cpp.o: CXX_COMPILER_
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/mod_switch.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/mod_switch.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv
@@ -2000,7 +2000,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/mod_switch.cpp.o: CXX_COMPI
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/basics.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/basics.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks
@@ -2008,7 +2008,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/basics.cpp.o: CXX_COMPILER
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/arith.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks
@@ -2016,7 +2016,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/arith.cpp.o: CXX_COMPILER_
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/rescaling.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/rescaling.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks
@@ -2024,7 +2024,7 @@ build bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/rescaling.cpp.o: CXX_COMPI
 build bench/CMakeFiles/benchmarks.dir/__/src/fhe/tfhe/func_boot.cpp.o: CXX_COMPILER__benchmarks_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp || cmake_object_order_depends_target_benchmarks
   DEFINES = -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = bench/CMakeFiles/benchmarks.dir/__/src/fhe/tfhe/func_boot.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = bench/CMakeFiles/benchmarks.dir
   OBJECT_FILE_DIR = bench/CMakeFiles/benchmarks.dir/__/src/fhe/tfhe
@@ -2140,7 +2140,7 @@ build cmake_object_order_depends_target_ckks_example: phony || cmake_object_orde
 build examples/CMakeFiles/ckks_example.dir/ckks_example.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/examples/ckks_example.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/ckks_example.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir
@@ -2148,7 +2148,7 @@ build examples/CMakeFiles/ckks_example.dir/ckks_example.cpp.o: CXX_COMPILER__ckk
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/rns.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/rns.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common
@@ -2156,7 +2156,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/rns.cpp.o: CXX_COMP
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/bigint.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/bigint.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common
@@ -2164,7 +2164,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/bigint.cpp.o: CXX_C
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/mod_arith.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/mod_arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common
@@ -2172,7 +2172,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/mod_arith.cpp.o: CX
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/ntt.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/ntt.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common
@@ -2180,7 +2180,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/ntt.cpp.o: CXX_COMP
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/rns_transform.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/rns_transform.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common
@@ -2188,7 +2188,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/rns_transform.cpp.o
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/sampling.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/sampling.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common
@@ -2196,7 +2196,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/sampling.cpp.o: CXX
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/permutation.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/permutation.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common
@@ -2204,7 +2204,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/permutation.cpp.o: 
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/primelists.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/primelists.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/common
@@ -2212,7 +2212,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/primelists.cpp.o: C
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/rlwe.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/rlwe.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives
@@ -2220,7 +2220,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/rlwe.cpp.o: CXX
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/rgsw.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/rgsw.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives
@@ -2228,7 +2228,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/rgsw.cpp.o: CXX
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/keys.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/keys.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives
@@ -2236,7 +2236,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/keys.cpp.o: CXX
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/arith.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv
@@ -2244,7 +2244,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/arith.cpp.o: CXX_COMPI
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/basics.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/basics.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv
@@ -2252,7 +2252,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/basics.cpp.o: CXX_COMP
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/mod_switch.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/mod_switch.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv
@@ -2260,7 +2260,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/mod_switch.cpp.o: CXX_
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/basics.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/basics.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks
@@ -2268,7 +2268,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/basics.cpp.o: CXX_COM
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/arith.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/arith.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks
@@ -2276,7 +2276,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/arith.cpp.o: CXX_COMP
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/rescaling.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/rescaling.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks
@@ -2284,7 +2284,7 @@ build examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/rescaling.cpp.o: CXX_
 build examples/CMakeFiles/ckks_example.dir/__/src/fhe/tfhe/func_boot.cpp.o: CXX_COMPILER__ckks_example_unscanned_Debug /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp || cmake_object_order_depends_target_ckks_example
   DEFINES = -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE
   DEP_FILE = examples/CMakeFiles/ckks_example.dir/__/src/fhe/tfhe/func_boot.cpp.o.d
-  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17
+  FLAGS = -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2
   INCLUDES = -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool
   OBJECT_DIR = examples/CMakeFiles/ckks_example.dir
   OBJECT_FILE_DIR = examples/CMakeFiles/ckks_example.dir/__/src/fhe/tfhe

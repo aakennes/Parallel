@@ -180,7 +180,7 @@ u64 __get_2nth_unity_root(u64 modulus, u64 n) {
 struct NTTFactors {
     NTTFactors(u64 modulus, size_t log_dimension, bool for_inverse = false) {
         const size_t log_modulus = (u64)(log2(modulus) + 0.5);
-        if (log_modulus > 59) {
+        if (log_modulus > 62) {
             throw std::invalid_argument(
                 "NTT not supporting primes with bit size > 59 currently.");
         }

@@ -1,631 +1,631 @@
 [
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/common/rns.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/common/rns.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/common/rns.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/common/bigint.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/common/bigint.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/common/bigint.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/common/mod_arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/common/mod_arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/common/mod_arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/common/ntt.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/common/ntt.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/common/ntt.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/common/rns_transform.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/common/rns_transform.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/common/rns_transform.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/common/sampling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/common/sampling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/common/sampling.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/common/permutation.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/common/permutation.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/common/permutation.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/common/primelists.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/common/primelists.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/common/primelists.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/primitives/rlwe.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/primitives/rlwe.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/primitives/rlwe.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/primitives/rgsw.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/primitives/rgsw.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/primitives/rgsw.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/primitives/keys.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/primitives/keys.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/primitives/keys.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/bgv/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/bgv/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/bgv/arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/bgv/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/bgv/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/bgv/basics.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/bgv/mod_switch.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/bgv/mod_switch.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/bgv/mod_switch.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/ckks/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/ckks/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/ckks/basics.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/ckks/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/ckks/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/ckks/arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/ckks/rescaling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/ckks/rescaling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/ckks/rescaling.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/fhe/CMakeFiles/hehub.dir/tfhe/func_boot.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/fhe/CMakeFiles/hehub.dir/tfhe/func_boot.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
   "output": "src/fhe/CMakeFiles/hehub.dir/tfhe/func_boot.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/linear_algebra.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/circuits/linear_algebra.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/linear_algebra.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/circuits/linear_algebra.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits/linear_algebra.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/linear_algebra.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/rns.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/rns.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/rns.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/bigint.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/bigint.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/bigint.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/mod_arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/mod_arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/mod_arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/ntt.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/ntt.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/ntt.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/rns_transform.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/rns_transform.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/rns_transform.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/sampling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/sampling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/sampling.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/permutation.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/permutation.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/permutation.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/primelists.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/primelists.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/common/primelists.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/rlwe.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/rlwe.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/rlwe.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/rgsw.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/rgsw.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/rgsw.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/keys.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/keys.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/primitives/keys.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/basics.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/mod_switch.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/mod_switch.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/bgv/mod_switch.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/basics.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/rescaling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/rescaling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/ckks/rescaling.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/tfhe/func_boot.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -Dhehub_circuits_EXPORTS -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -fPIC -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/tfhe/func_boot.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
   "output": "src/circuits/CMakeFiles/hehub-circuits.dir/__/fhe/tfhe/func_boot.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/tests.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/tests.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/tests.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/tests.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/tests/tests.cpp",
   "output": "tests/CMakeFiles/tests.dir/tests.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/common_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/common_t.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/common_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/common_t.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/tests/common_t.cpp",
   "output": "tests/CMakeFiles/tests.dir/common_t.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/bigint_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/bigint_t.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/bigint_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/bigint_t.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/tests/bigint_t.cpp",
   "output": "tests/CMakeFiles/tests.dir/bigint_t.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/mod_arith_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/mod_arith_t.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/mod_arith_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/mod_arith_t.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/tests/mod_arith_t.cpp",
   "output": "tests/CMakeFiles/tests.dir/mod_arith_t.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/ntt_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/ntt_t.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/ntt_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/ntt_t.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/tests/ntt_t.cpp",
   "output": "tests/CMakeFiles/tests.dir/ntt_t.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/rlwe_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/rlwe_t.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/rlwe_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/rlwe_t.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/tests/rlwe_t.cpp",
   "output": "tests/CMakeFiles/tests.dir/rlwe_t.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/bgv_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/bgv_t.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/bgv_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/bgv_t.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/tests/bgv_t.cpp",
   "output": "tests/CMakeFiles/tests.dir/bgv_t.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/ckks_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/ckks_t.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/ckks_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/ckks_t.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/tests/ckks_t.cpp",
   "output": "tests/CMakeFiles/tests.dir/ckks_t.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/lin_alg_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/lin_alg_t.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/lin_alg_t.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/tests/lin_alg_t.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/tests/lin_alg_t.cpp",
   "output": "tests/CMakeFiles/tests.dir/lin_alg_t.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/rns.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/rns.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/common/rns.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/bigint.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/bigint.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/common/bigint.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/mod_arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/mod_arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/common/mod_arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/ntt.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/ntt.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/common/ntt.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/rns_transform.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/rns_transform.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/common/rns_transform.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/sampling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/sampling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/common/sampling.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/permutation.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/permutation.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/common/permutation.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/primelists.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/common/primelists.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/common/primelists.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/primitives/rlwe.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/primitives/rlwe.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/primitives/rlwe.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/primitives/rgsw.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/primitives/rgsw.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/primitives/rgsw.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/primitives/keys.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/primitives/keys.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/primitives/keys.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/bgv/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/bgv/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/bgv/arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/bgv/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/bgv/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/bgv/basics.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/bgv/mod_switch.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/bgv/mod_switch.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/bgv/mod_switch.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/ckks/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/ckks/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/ckks/basics.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/ckks/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/ckks/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/ckks/arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/ckks/rescaling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/ckks/rescaling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/ckks/rescaling.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o tests/CMakeFiles/tests.dir/__/src/fhe/tfhe/func_boot.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -I/home/aakennes/code/Parallel/finalassignment_Mint/src/circuits -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o tests/CMakeFiles/tests.dir/__/src/fhe/tfhe/func_boot.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
   "output": "tests/CMakeFiles/tests.dir/__/src/fhe/tfhe/func_boot.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/benchmarks.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/bench/benchmarks.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/benchmarks.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/bench/benchmarks.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/bench/benchmarks.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/benchmarks.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/mod_arith_bm.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/bench/mod_arith_bm.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/mod_arith_bm.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/bench/mod_arith_bm.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/bench/mod_arith_bm.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/mod_arith_bm.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/ntt_bm.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/bench/ntt_bm.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/ntt_bm.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/bench/ntt_bm.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/bench/ntt_bm.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/ntt_bm.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/ckks_bm.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/bench/ckks_bm.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/ckks_bm.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/bench/ckks_bm.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/bench/ckks_bm.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/ckks_bm.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/rns.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/rns.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/rns.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/bigint.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/bigint.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/bigint.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/mod_arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/mod_arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/mod_arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/ntt.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/ntt.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/ntt.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/rns_transform.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/rns_transform.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/rns_transform.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/sampling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/sampling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/sampling.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/permutation.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/permutation.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/permutation.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/primelists.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/primelists.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/common/primelists.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/rlwe.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/rlwe.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/rlwe.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/rgsw.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/rgsw.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/rgsw.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/keys.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/keys.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/primitives/keys.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/basics.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/mod_switch.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/mod_switch.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/bgv/mod_switch.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/basics.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/rescaling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/rescaling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/ckks/rescaling.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/tfhe/func_boot.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
+  "command": "/usr/bin/clang++ -DCATCH_CONFIG_ENABLE_BENCHMARKING -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o bench/CMakeFiles/benchmarks.dir/__/src/fhe/tfhe/func_boot.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
   "output": "bench/CMakeFiles/benchmarks.dir/__/src/fhe/tfhe/func_boot.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/ckks_example.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/examples/ckks_example.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/ckks_example.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/examples/ckks_example.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/examples/ckks_example.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/ckks_example.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/rns.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/rns.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/rns.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/bigint.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/bigint.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/bigint.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/bigint.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/mod_arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/mod_arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/mod_arith.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/mod_arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/ntt.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/ntt.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/ntt.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/ntt.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/rns_transform.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/rns_transform.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/rns_transform.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/rns_transform.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/sampling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/sampling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/sampling.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/sampling.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/permutation.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/permutation.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/permutation.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/permutation.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/primelists.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/primelists.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/common/primelists.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/common/primelists.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/rlwe.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/rlwe.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rlwe.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/rlwe.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/rgsw.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/rgsw.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/rgsw.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/rgsw.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/keys.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/keys.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/primitives/keys.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/primitives/keys.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/arith.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/basics.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/basics.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/mod_switch.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/mod_switch.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/bgv/mod_switch.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/bgv/mod_switch.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/basics.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/basics.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/basics.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/arith.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/arith.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/arith.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/rescaling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/rescaling.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/ckks/rescaling.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/ckks/rescaling.cpp.o"
 },
 {
   "directory": "/home/aakennes/code/Parallel/build",
-  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/tfhe/func_boot.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
+  "command": "/usr/bin/clang++ -DHEHUB_DEBUG -DHEHUB_DEBUG_FHE -I/home/aakennes/code/Parallel/finalassignment_Mint/src -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/range-v3 -I/home/aakennes/code/Parallel/finalassignment_Mint/third-party/MemoryPool -g -std=gnu++17 -march=core-avx2 -fomit-frame-pointer -std=c++17 -O2 -o examples/CMakeFiles/ckks_example.dir/__/src/fhe/tfhe/func_boot.cpp.o -c /home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
   "file": "/home/aakennes/code/Parallel/finalassignment_Mint/src/fhe/tfhe/func_boot.cpp",
   "output": "examples/CMakeFiles/ckks_example.dir/__/src/fhe/tfhe/func_boot.cpp.o"
 }

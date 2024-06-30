@@ -18,7 +18,7 @@ endif()
 
 # compile options
 # add_compile_options(-O2)
-add_compile_options(-march=core-avx2 -fomit-frame-pointer -std=c++17)
+add_compile_options(-march=core-avx2 -fomit-frame-pointer -std=c++17 -O2)
 
 # compile the libraries
 add_subdirectory(src)

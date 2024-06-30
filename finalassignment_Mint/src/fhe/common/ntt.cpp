@@ -240,9 +240,7 @@ void ntt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
             std::swap(coeffs[i], coeffs[ntt_factors.shuffled_indices[i]]);
             
         }
-        // if(i<=5)printf("%d %lu\n",i,ntt_factors.shuffled_indices[i]);
     }
-    // printf("%lu %lu %lu ",root_of_2nth,root_of_2nth_inv,coeffs[0]);
     for(int mid = 1; mid < dimension; mid <<= 1) {
         auto Wn = __pow_mod(modulus, root_of_2nth, (modulus - 1) / (mid << 1));
 		for(int j = 0; j < dimension; j += (mid << 1)) {
@@ -255,7 +253,6 @@ void ntt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
 			}
 		}
 	}
-    // printf("%lu\n",coeffs[0]);
 }
 
 void intt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,

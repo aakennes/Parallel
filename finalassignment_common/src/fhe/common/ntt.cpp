@@ -154,7 +154,7 @@ void ntt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
     const u64 root_of_2nth = __get_2nth_unity_root(modulus, dimension);
     auto root_of_2nth_inv =
                 __pow_mod(modulus, root_of_2nth, 2 * dimension - 1);
-    printf("%lu %lu %lu ",root_of_2nth,root_of_2nth_inv,coeffs[0]);
+    // printf("%lu %lu %lu ",root_of_2nth,root_of_2nth_inv,coeffs[0]);
     for (level = 1, data_step = dimension; level <= log_dimension;
          level++, data_step >>= 1) {
         auto gap = data_step / 2;
@@ -177,7 +177,7 @@ void ntt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
     for (size_t i = 0; i < dimension; i++) {
         coeffs[i] -= ((coeffs[i] >> log_modulus) - div_fix) * modulus;
     }
-    printf("%lu\n",coeffs[0]);
+    // printf("%lu\n",coeffs[0]);
 }
 
 void intt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,

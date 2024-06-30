@@ -85,7 +85,8 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "core": "c"
     },
     "cmake.sourceDirectory": "/home/aakennes/code/Parallel/finalassignment_Mint"
 }
