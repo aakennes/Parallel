@@ -86,7 +86,8 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "variant": "cpp",
-        "core": "c"
+        "core": "c",
+        "mkl_support.h": "c"
     },
     "cmake.sourceDirectory": "/home/aakennes/code/Parallel/finalassignment_Mint"
 }

@@ -1,9 +1,11 @@
 cmake_minimum_required(VERSION 3.14)
 
 # Set a name and a version number for your project:
-# SET(CMAKE_C_COMPILER "/usr/bin/gcc")
-# SET(CMAKE_CXX_COMPILER "/usr/bin/g++")
+SET(CMAKE_C_COMPILER "/usr/bin/gcc")
+SET(CMAKE_CXX_COMPILER "/usr/bin/g++")
 project(hehub VERSION 0.1 LANGUAGES CXX)
+# set(CMAKE_CXX_STANDARD 11)
+# set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 # Output the compiler version
@@ -23,10 +25,10 @@ endif()
 if(HEHUB_DEBUG)
     add_compile_definitions(HEHUB_DEBUG)
 endif()
-
 # compile options
-# add_compile_options(-O2)
-add_compile_options(-march=core-avx2 -fomit-frame-pointer -std=c++17 -fopenmp)
+add_compile_options(-lpthread)
+add_compile_options(-O2)
+add_compile_options(-march=core-avx2 -fomit-frame-pointer -std=c++17)
 
 # compile the libraries
 add_subdirectory(src)
@@ -49,4 +51,11 @@ if(BUILD_DOCS)
 		${CMAKE_SOURCE_DIR}
 		WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 	)
+
+	# find_package(OpenMP REQUIRED)
+	# set(OPENMP_EXCLUDE_PATTERNS "${CMAKE_SOURCE_DIR}/third-party/*")
+	# OpenMP_add_docs(OpenMP
+	# 	${CMAKE_SOURCE_DIR}
+	# 	WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+	# )
 endif()

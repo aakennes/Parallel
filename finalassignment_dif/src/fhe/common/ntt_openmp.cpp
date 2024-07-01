@@ -3,6 +3,7 @@
 #include "permutation.h"
 #include <cmath>
 #include <map>
+// #include <omp.h>
 
 int qpow(int a,int x,int p){
     int ans=1;
@@ -76,34 +77,44 @@ struct NTTFactors {
                 "NTT not supporting primes with bit size > 59 currently.");
         }
         size_t dimension = 1 << log_dimension;
-        rt.resize(dimension);
-        irt.resize(dimension);
+        
         const u64 wnn = __get_nth_unity_root(modulus, dimension);
         auto invwnn =
                 __pow_mod(modulus, wnn, modulus-2);
         auto temp = __get_2nth_unity_root(modulus,dimension);
+        const u64 root_of_2nth = temp;
         if(!for_inverse){
+            rt.resize(dimension);
+            rt_harvey.resize(dimension);
             rt[0] = 1;
             rt[1] = temp;
-            for (size_t i = 2; i < dimension; i++) rt[i] = (u128)rt[i-1] * rt[1] % modulus;
+            auto rt_harvey_temp = ((u128)temp << 64) / modulus;
+            for (size_t i = 2; i < dimension; i++) rt[i] = mul_mod_harvey_lazy(modulus,rt[i-1],temp,rt_harvey_temp);
+            // for (size_t i = 2; i < dimension; i++) rt[i] = (u128)rt[i-1] * rt[1] % modulus;
             for (size_t i = 0, j = 0; i < dimension; i++) {
                 if (i > j) {
                     std::swap(rt[i], rt[j]);
                 }
                 for (size_t t = dimension >> 1; (j ^= t) < t; t >>= 1);
             }
+            for (size_t i = 0; i < dimension; i++) rt_harvey[i] = ((u128)rt[i] << 64) / modulus;
         }else{
-            
+            irt.resize(dimension);
+            irt_harvey.resize(dimension);
             irt[0] = 1;
             irt[1] = __pow_mod(modulus, temp, 2 * dimension - 1);
-            for (size_t i = 2; i < dimension; i++) irt[i] = (u128)irt[i-1] * irt[1] % modulus;
+            auto irt_harvey_temp = ((u128)irt[1] << 64) / modulus;
+            // for (size_t i = 2; i < dimension; i++) irt[i] = (u128)irt[i-1] * irt[1] % modulus;
+            for (size_t i = 2; i < dimension; i++) irt[i] = mul_mod_harvey_lazy(modulus,irt[i-1],irt[1],irt_harvey_temp);;
             // for (int i = 2; i < limit; i++) printf("%d ", irt[i]);
             for (size_t i = 0, j = 0; i < dimension; i++) {
                 if (i > j) {
                     std::swap(irt[i], irt[j]);
                 }
+                
                 for (size_t t = dimension >> 1; (j ^= t) < t; t >>= 1);
             }
+            for (size_t i = 0; i < dimension; i++) irt_harvey[i] = ((u128)irt[i] << 64) / modulus;
         }
         
         // printf("%lu\n",shuffled_indices[1]);
@@ -116,6 +127,9 @@ struct NTTFactors {
     ~NTTFactors() {}
     std::vector<u64> rt;
     std::vector<u64> irt;
+
+    std::vector<u64> rt_harvey;
+    std::vector<u64> irt_harvey;
 
 };
 
@@ -156,7 +170,12 @@ __find_or_create_ntt_factors(const u64 modulus, const size_t log_dimension,
         return it->second;
     }
 }
-
+#define BARRETT_ADD(a, b, p) ({ \
+    u64 aa = (u64)(a) + (b); \
+    u64 x = aa - (((u128)(aa) * (((u128)1 << 64) / p)) >> 64) * (p); \
+    if (x >= (p)) x -= (p); \
+    x; \
+})
 void ntt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
                                  u64 coeffs[]) {
     const size_t dimension = 1ULL << log_dimension;
@@ -164,13 +183,20 @@ void ntt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
     const auto &ntt_factors =
         __find_or_create_ntt_factors(modulus, log_dimension);
     for (int i = 1, l = dimension >> 1; i < dimension; i <<= 1, l >>= 1) {
-        for (int j = 0, q = 0; j < i; j++, q += l << 1) {
+        // #pragma omp parallel for num_threads(thread_count) schedule(static)
+        for (int j = 0; j < i; j++) {
             auto w = ntt_factors.rt[i + j];
-            for (int k = q; k < q + l; k++) {
+            auto iw = ntt_factors.rt_harvey[i + j];
+            for (int k = j * (l << 1); k < j * (l << 1) + l; k++) {
                 auto x = coeffs[k] ;
-                auto y = ((u128)coeffs[k + l] * w% modulus);
-                coeffs[k] = ((u128)x + y) % modulus,
-                coeffs[k + l] = ((u128)x - y + modulus) % modulus;
+                auto y = mul_mod_harvey_lazy(modulus, coeffs[k + l], w,iw);
+                // auto y = (u128)coeffs[k + l]* w%modulus;
+                // coeffs[k] = ((u128)x + y)%modulus,
+                coeffs[k] =  BARRETT_ADD(x,y,modulus);
+                coeffs[k + l] = (x + modulus - y)% modulus;
+                // i128 temp = 1;
+                // coeffs[k + l] = x - y + modulus;
+                // if(coeffs[k + l] < 0)coeffs[k + l]+=modulus;
             }
         }
 	}
@@ -184,24 +210,42 @@ void intt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
     const auto &intt_factors =
         __find_or_create_ntt_factors(modulus, log_dimension, true);
     for (int l = 1, i = dimension >> 1; i; l <<= 1, i >>= 1) {
-        for (int j = 0, q = 0; j < i; j++, q += l << 1) {
+        // #pragma omp parallel for num_threads(thread_count) schedule(static)
+        for (int j = 0; j < i; j++) {
             auto w = intt_factors.irt[i + j];
-            for (int k = q; k < q + l; k++) {
+            auto iw = intt_factors.irt_harvey[i + j];
+            for (int k = j * (l << 1); k < j * (l << 1) + l; k++) {
                 auto x = values[k] ;
                 auto y = values[k + l];
-                values[k] = ((u128)x + y) % modulus,
-                values[k + l] = ((u128)x - y + modulus) * w % modulus;
+                
+                auto temp = x + modulus - y ;
+                values[k + l] = mul_mod_harvey_lazy(modulus, temp, w, iw);
+                // values[k + l] = (u128)temp*w % modulus;
+                // values[k] = ((u128)x + y) % modulus;
+                values[k] = BARRETT_ADD(x,y,modulus);
+                // values[k] = x + y;
+                // values[k + l] = (u128)(x - y + modulus) * w % modulus;
             }
         }
 	}
     auto invn=__pow_mod(modulus,dimension,modulus-2);
-    
-    // std::cout<<invn<<'\n';
+    auto invn_harvey=((u128)invn << 64) / modulus;
     for(size_t i = 0; i < dimension; i++){
-        values[i] = ((u128)values[i] * invn) % modulus;
-    } 
-}
+        // values[i] = ((u128)values[i] * invn) % modulus;
+        values[i] = mul_mod_harvey_lazy(modulus, values[i], invn, invn_harvey);
+    }
 
+    // const u64 log_modulus = (u64)(log2(modulus) + 0.5);
+    // const u64 div_fix = (modulus >= (1ULL << log_modulus)) ? 1 : 0;
+    // for (size_t i = 0; i < dimension; i++, idx++) {
+    //     values[i] -= ((values[i] >> log_modulus) - div_fix) * modulus;
+    //     values[i] =
+    //         mul_mod_harvey_lazy(modulus, values[i], intt_factors.seq[idx],
+    //                             intt_factors.seq_harvey[idx]);
+    // }
+}
+#undef BARRETT_ADD
+#undef thread_count
 void cache_ntt_factors_strict(const u64 log_dimension,
                               const std::vector<u64> &moduli) {
     for (auto modulus : moduli) {

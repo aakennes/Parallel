@@ -3,7 +3,14 @@
 #include "permutation.h"
 #include <cmath>
 #include <map>
-// #include <omp.h>
+#include <pthread.h>
+#include <chrono>
+
+static pthread_barrier_t barr_merge;
+static pthread_barrier_t barr_ntt;
+#define thread_count 12
+static double alltime = 0;
+static double ntttime = 0;
 
 int qpow(int a,int x,int p){
     int ans=1;
@@ -176,73 +183,172 @@ __find_or_create_ntt_factors(const u64 modulus, const size_t log_dimension,
     if (x >= (p)) x -= (p); \
     x; \
 })
+struct ThreadArgs {
+    int start;
+    int end;
+    int id;
+    size_t log_dimension;
+    u64 modulus;
+    u64* coeffs;
+};
+
+void* ntt_thread_func(void* arg) {
+    // auto Start=std::chrono::high_resolution_clock::now();
+    ThreadArgs* args = (ThreadArgs*)arg;
+    int start = args->start;
+    int end = args->end;
+    int id= args->id;
+    size_t log_dimension = args->log_dimension;
+    u64 modulus = args->modulus;
+    u64* coeffs = args->coeffs;
+
+    const size_t dimension = 1ULL << log_dimension;
+    const auto& ntt_factors = __find_or_create_ntt_factors(modulus, log_dimension);
+
+    for (int i = 1, l = dimension >> 1; i < dimension; i <<= 1, l >>= 1) {
+        for (int j = 0, q = 0; j < i; j++, q += l << 1) {
+            auto w = ntt_factors.rt[i + j];
+            auto iw = ntt_factors.rt_harvey[i + j];
+            for (int k = q + id; k < q + l; k+=thread_count) {
+                auto x = coeffs[k];
+                auto y = mul_mod_harvey_lazy(modulus, coeffs[k + l], w, iw);
+                coeffs[k] = BARRETT_ADD(x, y, modulus);
+                coeffs[k + l] = (x + modulus - y) % modulus;
+            }
+        }
+        pthread_barrier_wait(&barr_merge);
+    }
+    // auto End=std::chrono::high_resolution_clock::now();
+    // std::chrono::duration<double,std::ratio<1,1000>>elapsed=End-Start;
+    // ntttime+=elapsed.count();
+    return nullptr;
+}
+
 void ntt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
                                  u64 coeffs[]) {
+    auto Start=std::chrono::high_resolution_clock::now();
     const size_t dimension = 1ULL << log_dimension;
     // generate or read from cache
     const auto &ntt_factors =
         __find_or_create_ntt_factors(modulus, log_dimension);
-    for (int i = 1, l = dimension >> 1; i < dimension; i <<= 1, l >>= 1) {
-        // #pragma omp parallel for num_threads(thread_count) schedule(static)
-        for (int j = 0; j < i; j++) {
-            auto w = ntt_factors.rt[i + j];
-            auto iw = ntt_factors.rt_harvey[i + j];
-            for (int k = j * (l << 1); k < j * (l << 1) + l; k++) {
+    pthread_t threads[thread_count];
+    ThreadArgs thread_args[thread_count];
+    
+
+    pthread_barrier_init(&barr_merge,NULL,thread_count);
+    int chunk_size = dimension / thread_count;
+    int remainder = dimension % thread_count;
+    int start = 0;
+
+    for (int i = 0; i < thread_count; ++i) {
+        thread_args[i].start = start;
+        thread_args[i].end = start + chunk_size + (i < remainder ? 1 : 0);
+        thread_args[i].id = i;
+        thread_args[i].log_dimension = log_dimension;
+        thread_args[i].modulus = modulus;
+        thread_args[i].coeffs = coeffs;
+        pthread_create(&threads[i], nullptr, ntt_thread_func, &thread_args[i]);    
+        start = thread_args[i].end;
+    }
+
+    auto Startt=std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < thread_count; ++i) {
+        pthread_join(threads[i], nullptr);
+    }
+    auto Endd=std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double,std::ratio<1,1000>>elapsedd=Endd-Startt;
+    ntttime+=elapsedd.count();
+
+    pthread_barrier_destroy(&barr_merge);
+    auto End=std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double,std::ratio<1,1000>>elapsed=End-Start;
+    alltime+=elapsed.count();
+    printf("%lf,%lf,%lf\n",alltime,ntttime,alltime-ntttime);
+}
+
+void* intt_thread_func(void* arg) {
+    // auto Start=std::chrono::high_resolution_clock::now();
+    ThreadArgs* args = (ThreadArgs*)arg;
+    int start = args->start;
+    int end = args->end;
+    int id= args->id;
+    size_t log_dimension = args->log_dimension;
+    u64 modulus = args->modulus;
+    u64* coeffs = args->coeffs;
+    // printf("%d\n",start);
+    const size_t dimension = 1ULL << log_dimension;
+    const auto& intt_factors = __find_or_create_ntt_factors(modulus, log_dimension, true);
+
+    for (int l = 1, i = dimension >> 1; i; l <<= 1, i >>= 1) {
+        for (int j = 0, q = 0; j < i; j++, q += l << 1) {
+            auto w = intt_factors.irt[i + j];
+            auto iw = intt_factors.irt_harvey[i + j];
+            for (int k = q + id; k < q + l; k+=thread_count) {
                 auto x = coeffs[k] ;
-                auto y = mul_mod_harvey_lazy(modulus, coeffs[k + l], w,iw);
-                // auto y = (u128)coeffs[k + l]* w%modulus;
-                // coeffs[k] = ((u128)x + y)%modulus,
-                coeffs[k] =  BARRETT_ADD(x,y,modulus);
-                coeffs[k + l] = (x + modulus - y)% modulus;
-                // i128 temp = 1;
-                // coeffs[k + l] = x - y + modulus;
-                // if(coeffs[k + l] < 0)coeffs[k + l]+=modulus;
+                auto y = coeffs[k + l];
+                
+                auto temp = x + modulus - y;
+                coeffs[k + l] = mul_mod_harvey_lazy(modulus, temp, w, iw);
+                coeffs[k] = BARRETT_ADD(x,y,modulus);
             }
         }
-	}
+        pthread_barrier_wait(&barr_merge);
+    }
+    // auto End=std::chrono::high_resolution_clock::now();
+    // std::chrono::duration<double,std::ratio<1,1000>>elapsed=End-Start;
+    // ntttime+=elapsed.count();
+    return nullptr;
 }
 
 void intt_negacyclic_inplace_lazy(const size_t log_dimension, const u64 modulus,
                                   u64 values[]) {
+    auto Start=std::chrono::high_resolution_clock::now();
     const size_t dimension = 1ULL << log_dimension;
     // printf("%lu\n",modulus);
     // generate or read from cache
     const auto &intt_factors =
         __find_or_create_ntt_factors(modulus, log_dimension, true);
-    for (int l = 1, i = dimension >> 1; i; l <<= 1, i >>= 1) {
-        // #pragma omp parallel for num_threads(thread_count) schedule(static)
-        for (int j = 0; j < i; j++) {
-            auto w = intt_factors.irt[i + j];
-            auto iw = intt_factors.irt_harvey[i + j];
-            for (int k = j * (l << 1); k < j * (l << 1) + l; k++) {
-                auto x = values[k] ;
-                auto y = values[k + l];
-                
-                auto temp = x + modulus - y ;
-                values[k + l] = mul_mod_harvey_lazy(modulus, temp, w, iw);
-                // values[k + l] = (u128)temp*w % modulus;
-                // values[k] = ((u128)x + y) % modulus;
-                values[k] = BARRETT_ADD(x,y,modulus);
-                // values[k] = x + y;
-                // values[k + l] = (u128)(x - y + modulus) * w % modulus;
-            }
-        }
-	}
+    
+    // generate or read from cache
+    pthread_t threads[thread_count];
+    ThreadArgs thread_args[thread_count];
+    
+
+    pthread_barrier_init(&barr_merge,NULL,thread_count);
+    int chunk_size = dimension / thread_count;
+    int remainder = dimension % thread_count;
+    int start = 0;
+
+    for (int i = 0; i < thread_count; ++i) {
+        thread_args[i].start = start;
+        thread_args[i].end = start + chunk_size + (i < remainder ? 1 : 0);
+        thread_args[i].id = i;
+        thread_args[i].log_dimension = log_dimension;
+        thread_args[i].modulus = modulus;
+        thread_args[i].coeffs = values;
+        pthread_create(&threads[i], nullptr, intt_thread_func, &thread_args[i]);    
+        start = thread_args[i].end;
+    }
+    auto Startt=std::chrono::high_resolution_clock::now();
+    for (int i = 0; i < thread_count; ++i) {
+        pthread_join(threads[i], nullptr);
+    }
+    auto Endd=std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double,std::ratio<1,1000>>elapsedd=Endd-Startt;
+    ntttime+=elapsedd.count();
+    pthread_barrier_destroy(&barr_merge);
+
+
     auto invn=__pow_mod(modulus,dimension,modulus-2);
     auto invn_harvey=((u128)invn << 64) / modulus;
     for(size_t i = 0; i < dimension; i++){
         // values[i] = ((u128)values[i] * invn) % modulus;
         values[i] = mul_mod_harvey_lazy(modulus, values[i], invn, invn_harvey);
     }
-
-    // const u64 log_modulus = (u64)(log2(modulus) + 0.5);
-    // const u64 div_fix = (modulus >= (1ULL << log_modulus)) ? 1 : 0;
-    // for (size_t i = 0; i < dimension; i++, idx++) {
-    //     values[i] -= ((values[i] >> log_modulus) - div_fix) * modulus;
-    //     values[i] =
-    //         mul_mod_harvey_lazy(modulus, values[i], intt_factors.seq[idx],
-    //                             intt_factors.seq_harvey[idx]);
-    // }
+    auto End=std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double,std::ratio<1,1000>>elapsed=End-Start;
+    alltime+=elapsed.count();
+    printf("%lf,%lf,%lf\n",alltime,ntttime,alltime-ntttime);
 }
 #undef BARRETT_ADD
 #undef thread_count
